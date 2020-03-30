@@ -434,7 +434,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  171 字
+                  189 字
                 </span>
               
 
@@ -480,30 +480,12 @@
 <h1 id="症状"><a href="#症状" class="headerlink" title="症状"></a>症状</h1><p>主要表现为网页链接后多出<strong>%20</strong></p>
 <h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>打开<strong>username.github.io\themes\next_config.yml</strong></p>
 <p>找到以下代码</p>
-<p>(<code>)
-menu:
-  home: / || home
-  about: /about/ || user
-  tags: /tags/ || tags
-  categories: /categories/ || th
-  archives: /archives/ || archive
-  schedule: /schedule/ || calendar
-  sitemap: /sitemap.xml || sitemap
-  commonweal: /404/ || heartbeat
-(</code>)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || home</span><br><span class="line">  about: &#x2F;about&#x2F; || user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || archive</span><br><span class="line">  schedule: &#x2F;schedule&#x2F; || calendar</span><br><span class="line">  sitemap: &#x2F;sitemap.xml || sitemap</span><br><span class="line">  commonweal: &#x2F;404&#x2F; || heartbeat</span><br></pre></td></tr></table></figure>
+
 <p>明显发现每个||前都带有<strong>空格</strong>，这个<strong>空格</strong>就是罪魁祸首啦。</p>
 <p>删除每个||前的<strong>空格</strong>，改为以下代码</p>
-<p>(<code>)
-menu:
-  home: /|| home
-  about: /about/|| user
-  tags: /tags/|| tags
-  categories: /categories/|| th
-  archives: /archives/|| archive
-  schedule: /schedule/|| calendar
-  sitemap: /sitemap.xml|| sitemap
-  commonweal: /404/|| heartbeat
-(</code>)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F;|| home</span><br><span class="line">  about: &#x2F;about&#x2F;|| user</span><br><span class="line">  tags: &#x2F;tags&#x2F;|| tags</span><br><span class="line">  categories: &#x2F;categories&#x2F;|| th</span><br><span class="line">  archives: &#x2F;archives&#x2F;|| archive</span><br><span class="line">  schedule: &#x2F;schedule&#x2F;|| calendar</span><br><span class="line">  sitemap: &#x2F;sitemap.xml|| sitemap</span><br><span class="line">  commonweal: &#x2F;404&#x2F;|| heartbeat</span><br></pre></td></tr></table></figure>
+
 <p>重新部署发布，解决问题。</p>
 
           
@@ -885,7 +867,7 @@ menu:
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">198</span>
+    <span title="Site words total count">216</span>
   
 </div>
 
@@ -939,7 +921,7 @@ setInterval("createtime()",250);
     <!-- 博客字数统计 -->
     <span class="site-pv">
       <i class="fa fa-pencil"></i>
-      博客全站共： <span class="post-count">198</span> 字
+      博客全站共： <span class="post-count">216</span> 字
     </span>
 </div>
 <!-- 新增访客统计代码 END-->
