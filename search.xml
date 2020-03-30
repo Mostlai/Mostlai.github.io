@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>关于Next主题中分类/标签等页面404的解决办法</title>
+    <url>/2020/03/30/%E4%BA%8ENext%E4%B8%BB%E9%A2%98%E4%B8%AD%E5%88%86%E7%B1%BB-%E6%A0%87%E7%AD%BE%E7%AD%89%E9%A1%B5%E9%9D%A2404%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<blockquote>
+<h1 id="闲话"><a href="#闲话" class="headerlink" title="闲话"></a>闲话</h1></blockquote>
+<p>  最近在搞博客，Next主题踩了不少坑，这个404问题就困扰了我很久，研究了一会儿终于找到了办法。</p>
+<hr>
+<a id="more"></a>
+
+<h1 id="症状"><a href="#症状" class="headerlink" title="症状"></a>症状</h1><p>主要表现为网页链接后多出<strong>%20</strong></p>
+<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>打开<strong>username.github.io\themes\next_config.yml</strong></p>
+<p>找到以下代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || home</span><br><span class="line">  about: &#x2F;about&#x2F; || user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || archive</span><br><span class="line">  schedule: &#x2F;schedule&#x2F; || calendar</span><br><span class="line">  sitemap: &#x2F;sitemap.xml || sitemap</span><br><span class="line">  commonweal: &#x2F;404&#x2F; || heartbeat</span><br></pre></td></tr></table></figure>
+
+<p>明显发现每个||前都带有<strong>空格</strong>，这个<strong>空格</strong>就是罪魁祸首啦。</p>
+<p>删除每个||前的<strong>空格</strong>，改为以下代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F;|| home</span><br><span class="line">  about: &#x2F;about&#x2F;|| user</span><br><span class="line">  tags: &#x2F;tags&#x2F;|| tags</span><br><span class="line">  categories: &#x2F;categories&#x2F;|| th</span><br><span class="line">  archives: &#x2F;archives&#x2F;|| archive</span><br><span class="line">  schedule: &#x2F;schedule&#x2F;|| calendar</span><br><span class="line">  sitemap: &#x2F;sitemap.xml|| sitemap</span><br><span class="line">  commonweal: &#x2F;404&#x2F;|| heartbeat</span><br></pre></td></tr></table></figure>
+
+<p>重新部署发布，解决问题。</p>
+]]></content>
+      <categories>
+        <category>开发日记</category>
+        <category>折腾</category>
+      </categories>
+      <tags>
+        <tag>开发日记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NEW ONE</title>
+    <url>/2020/03/29/NEW-ONE-1/</url>
+    <content><![CDATA[<h2 id="初入博客"><a href="#初入博客" class="headerlink" title="初入博客"></a>初入博客</h2><a id="more"></a>
+
+<blockquote>
+<p>我已出仓，感觉良好。</p>
+</blockquote>
+<p> ————————————————————</p>
+<p> 2020.3.29</p>
+<p> 总算是搭建好博客了呢，开心！</p>
+<p><img src="/2020/03/29/NEW-ONE-1/pasted-1.png" alt="示例"></p>
+<p>——————————————————————</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+        <category>最初之作</category>
+      </categories>
+      <tags>
+        <tag>摸鱼</tag>
+      </tags>
+  </entry>
+</search>
