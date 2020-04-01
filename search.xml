@@ -2,11 +2,11 @@
 <search>
   <entry>
     <title>Hexo+github搭建个人博客</title>
-    <url>/2020/03/31/Hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <url>/2020/03/31/Hexo-github/</url>
     <content><![CDATA[<blockquote>
 <h1 id="闲话"><a href="#闲话" class="headerlink" title="闲话"></a>闲话</h1></blockquote>
 <p>前段时间网上冲浪，浏览了一下别人的博客，顿时想自己搞一个（就是酸了），在网上查阅资料后，总结出了以下方法。</p>
-<p><img src="/2020/03/31/Hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/2.png" alt="示例"></p>
+<p><img src="/2020/03/31/Hexo-github/2.png" alt="示例"></p>
 <a id="more"></a>
 
 <h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>1.github账号</p>
@@ -14,7 +14,7 @@
 <p>3.安装Nodejs</p>
 <p>4.安装Hexo</p>
 <h1 id="注册github"><a href="#注册github" class="headerlink" title="注册github"></a>注册github</h1><p>首先到<strong><em><a href="https://github.com/join?source=header-home" target="_blank" rel="noopener">github</a></em></strong>处注册账号</p>
-<p><img src="/2020/03/31/Hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/1.PNG" alt="示例"></p>
+<p><img src="/2020/03/31/Hexo-github/1.PNG" alt="示例"></p>
 <p>注意：username会影响到你的域名，你的域名将会是username.github.io，所以建议好好取名。</p>
 <h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>在github创建一个<a href="https://github.com/new" target="_blank" rel="noopener">仓库</a>（repository），这将用来存储你的网站，点击<strong><em>New repository</em></strong>按钮创建仓库，<strong><em>Respository name</em></strong>中的<strong>username.github.io</strong>的username一定与前面的Owner一致。</p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>Hexo是一个博客框架，基于Nodejs。下面我们开始安Git，Nodejs，Hexo。</p>
@@ -70,7 +70,7 @@
   </entry>
   <entry>
     <title>关于Next主题中分类/标签等页面404的解决办法</title>
-    <url>/2020/03/30/%E4%BA%8ENext%E4%B8%BB%E9%A2%98%E4%B8%AD%E5%88%86%E7%B1%BB-%E6%A0%87%E7%AD%BE%E7%AD%89%E9%A1%B5%E9%9D%A2404%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    <url>/2020/03/30/Next-404/</url>
     <content><![CDATA[<blockquote>
 <h1 id="闲话"><a href="#闲话" class="headerlink" title="闲话"></a>闲话</h1></blockquote>
 <p>  最近在搞博客，Next主题踩了不少坑，这个404问题就困扰了我很久，研究了一会儿终于找到了办法。</p>
