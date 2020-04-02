@@ -27,9 +27,9 @@
 
 <hr>
 <p>Primary ：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span>Primary %&#125;</span><br><span class="line"><span class="comment"># Primary风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span>primary %&#125;</span><br><span class="line"><span class="comment"># primary风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
 
-<div class="note Primary"><h1 id="Primary风格"><a href="#Primary风格" class="headerlink" title="Primary风格"></a>Primary风格</h1><p>文字</p></div>
+<div class="note primary"><h1 id="primary风格"><a href="#primary风格" class="headerlink" title="primary风格"></a>primary风格</h1><p>文字</p></div>
 
 <hr>
 <p>success ：</p>
@@ -40,21 +40,21 @@
 
 <hr>
 <p>Info ：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span><span class="builtin-name">Info</span> %&#125;</span><br><span class="line"><span class="comment"># Info风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span><span class="builtin-name">info</span> %&#125;</span><br><span class="line"><span class="comment"># info风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
 
-<div class="note Info"><h1 id="Info风格"><a href="#Info风格" class="headerlink" title="Info风格"></a>Info风格</h1><p>文字</p></div>
+<div class="note info"><h1 id="info风格"><a href="#info风格" class="headerlink" title="info风格"></a>info风格</h1><p>文字</p></div>
 
 <hr>
 <p>Warning ：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span><span class="builtin-name">Warning</span> %&#125;</span><br><span class="line"><span class="comment"># Warning风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span><span class="builtin-name">warning</span> %&#125;</span><br><span class="line"><span class="comment"># warning风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
 
-<div class="note Warning"><h1 id="Warning风格"><a href="#Warning风格" class="headerlink" title="Warning风格"></a>Warning风格</h1><p>文字</p></div>
+<div class="note warning"><h1 id="warning风格"><a href="#warning风格" class="headerlink" title="warning风格"></a>warning风格</h1><p>文字</p></div>
 
 <hr>
 <p>Danger ：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span>Danger %&#125;</span><br><span class="line"><span class="comment"># Danger风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span>danger %&#125;</span><br><span class="line"><span class="comment"># danger风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
 
-<div class="note Danger"><h1 id="Danger风格"><a href="#Danger风格" class="headerlink" title="Danger风格"></a>Danger风格</h1><p>文字</p></div>
+<div class="note danger"><h1 id="danger风格"><a href="#danger风格" class="headerlink" title="danger风格"></a>danger风格</h1><p>文字</p></div>
 
 <hr>
 <p>无图标 ：</p>
