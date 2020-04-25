@@ -1,75 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo博客Next主题note标签</title>
-    <url>/2020/04/01/note-tag/</url>
-    <content><![CDATA[<blockquote>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1></blockquote>
-<p>在Hexo编写文本时，为了表述的更清晰明确，往往可以通过note标签插件来实现。Note标签通过在左侧使用图标和划线，实现提醒功能。这里我以Next主题为示例，介绍一下note标签的用法。</p>
-<a id="more"></a>
+    <title>NEW ONE</title>
+    <url>/2020/03/29/NEW-ONE-1/</url>
+    <content><![CDATA[<h2 id="初入博客"><a href="#初入博客" class="headerlink" title="初入博客"></a>初入博客</h2><a id="more"></a>
 
-<h1 id="Note配置"><a href="#Note配置" class="headerlink" title="Note配置"></a>Note配置</h1><p>打开uesername.github.io\themes\next_config.yml文件</p>
-<p>搜索note关键词，找到以下代码</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">note:</span><br><span class="line">  #<span class="built_in"> Note </span>tag style values:</span><br><span class="line">  #  -<span class="built_in"> simple </span>   bs-callout old alert style. Default.</span><br><span class="line">  #  - modern    bs-callout new (v2-v3) alert style.</span><br><span class="line">  #  - flat      flat callout style with background, like on Mozilla <span class="keyword">or</span> StackOverflow.</span><br><span class="line">  #  - disabled  <span class="builtin-name">disable</span> all CSS styles import of<span class="built_in"> note </span>tag.</span><br><span class="line">  style:<span class="built_in"> simple </span>#<span class="built_in"> simple </span>| modern | flat | disabled</span><br><span class="line">  icons: <span class="literal">true</span> # 是否显示图标</span><br><span class="line">  border_radius: 3 # 圆角半径</span><br><span class="line">  # Offset lighter of background <span class="keyword">in</span> % <span class="keyword">for</span> modern <span class="keyword">and</span> flat styles (modern: -12 | 12; flat: -18 | 6).</span><br><span class="line">  # Offset also applied <span class="keyword">to</span> label tag variables. This option can work with disabled<span class="built_in"> note </span>tag.</span><br><span class="line">  light_bg_offset: 0 # 默认背景减淡效果，以百分比计算</span><br></pre></td></tr></table></figure>
-
-<h1 id="Note用法"><a href="#Note用法" class="headerlink" title="Note用法"></a>Note用法</h1><p>Note标签包括default | primary | success | info | warning | danger，下面我进行举例说明。</p>
-<hr>
-<p>None：</p>
-<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">note</span> %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">b</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">b</span>&gt;</span></span></span><br><span class="line"><span class="xml">文字</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">endnote</span> %&#125;</span></span><br></pre></td></tr></table></figure>
-
-<div class="note "><p><b>标题</b><br>文字</p></div>
-
-<hr>
-<p>Default ：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note default </span>%&#125;</span><br><span class="line"><span class="comment"># default风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-
-<div class="note default"><h1 id="default风格"><a href="#default风格" class="headerlink" title="default风格"></a>default风格</h1><p>文字</p></div>
-
-<hr>
-<p>Primary ：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span>primary %&#125;</span><br><span class="line"><span class="comment"># primary风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-
-<div class="note primary"><h1 id="primary风格"><a href="#primary风格" class="headerlink" title="primary风格"></a>primary风格</h1><p>文字</p></div>
-
-<hr>
-<p>success ：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span>success %&#125;</span><br><span class="line"><span class="comment"># success风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-
-<div class="note success"><h1 id="success风格"><a href="#success风格" class="headerlink" title="success风格"></a>success风格</h1><p>文字</p></div>
-
-
-<hr>
-<p>Info ：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span><span class="builtin-name">info</span> %&#125;</span><br><span class="line"><span class="comment"># info风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-
-<div class="note info"><h1 id="info风格"><a href="#info风格" class="headerlink" title="info风格"></a>info风格</h1><p>文字</p></div>
-
-<hr>
-<p>Warning ：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span><span class="builtin-name">warning</span> %&#125;</span><br><span class="line"><span class="comment"># warning风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-
-<div class="note warning"><h1 id="warning风格"><a href="#warning风格" class="headerlink" title="warning风格"></a>warning风格</h1><p>文字</p></div>
-
-<hr>
-<p>Danger ：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span>danger %&#125;</span><br><span class="line"><span class="comment"># danger风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-
-<div class="note danger"><h1 id="danger风格"><a href="#danger风格" class="headerlink" title="danger风格"></a>danger风格</h1><p>文字</p></div>
-
-<hr>
-<p>无图标 ：</p>
-<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span><span class="builtin-name">info</span> no-icon %&#125;</span><br><span class="line"><span class="comment"># 无图标</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
-
-<div class="note info no-icon"><h1 id="无图标"><a href="#无图标" class="headerlink" title="无图标"></a>无图标</h1><p>文字</p></div>
-
-<hr>
+<blockquote>
+<p>我已出仓，感觉良好。</p>
+</blockquote>
+<p> ————————————————————</p>
+<p> 2020.3.29</p>
+<p> 总算是搭建好博客了呢，开心！</p>
+<p><img src="/2020/03/29/NEW-ONE-1/pasted-1.png" alt="示例"></p>
+<p>——————————————————————</p>
 ]]></content>
       <categories>
-        <category>开发日记</category>
-        <category>折腾</category>
+        <category>随笔</category>
+        <category>最初之作</category>
       </categories>
       <tags>
-        <tag>开发日记</tag>
+        <tag>摸鱼</tag>
       </tags>
   </entry>
   <entry>
@@ -169,25 +119,75 @@
       </tags>
   </entry>
   <entry>
-    <title>NEW ONE</title>
-    <url>/2020/03/29/NEW-ONE-1/</url>
-    <content><![CDATA[<h2 id="初入博客"><a href="#初入博客" class="headerlink" title="初入博客"></a>初入博客</h2><a id="more"></a>
+    <title>Hexo博客Next主题note标签</title>
+    <url>/2020/04/01/note-tag/</url>
+    <content><![CDATA[<blockquote>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1></blockquote>
+<p>在Hexo编写文本时，为了表述的更清晰明确，往往可以通过note标签插件来实现。Note标签通过在左侧使用图标和划线，实现提醒功能。这里我以Next主题为示例，介绍一下note标签的用法。</p>
+<a id="more"></a>
 
-<blockquote>
-<p>我已出仓，感觉良好。</p>
-</blockquote>
-<p> ————————————————————</p>
-<p> 2020.3.29</p>
-<p> 总算是搭建好博客了呢，开心！</p>
-<p><img src="/2020/03/29/NEW-ONE-1/pasted-1.png" alt="示例"></p>
-<p>——————————————————————</p>
+<h1 id="Note配置"><a href="#Note配置" class="headerlink" title="Note配置"></a>Note配置</h1><p>打开uesername.github.io\themes\next_config.yml文件</p>
+<p>搜索note关键词，找到以下代码</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">note:</span><br><span class="line">  #<span class="built_in"> Note </span>tag style values:</span><br><span class="line">  #  -<span class="built_in"> simple </span>   bs-callout old alert style. Default.</span><br><span class="line">  #  - modern    bs-callout new (v2-v3) alert style.</span><br><span class="line">  #  - flat      flat callout style with background, like on Mozilla <span class="keyword">or</span> StackOverflow.</span><br><span class="line">  #  - disabled  <span class="builtin-name">disable</span> all CSS styles import of<span class="built_in"> note </span>tag.</span><br><span class="line">  style:<span class="built_in"> simple </span>#<span class="built_in"> simple </span>| modern | flat | disabled</span><br><span class="line">  icons: <span class="literal">true</span> # 是否显示图标</span><br><span class="line">  border_radius: 3 # 圆角半径</span><br><span class="line">  # Offset lighter of background <span class="keyword">in</span> % <span class="keyword">for</span> modern <span class="keyword">and</span> flat styles (modern: -12 | 12; flat: -18 | 6).</span><br><span class="line">  # Offset also applied <span class="keyword">to</span> label tag variables. This option can work with disabled<span class="built_in"> note </span>tag.</span><br><span class="line">  light_bg_offset: 0 # 默认背景减淡效果，以百分比计算</span><br></pre></td></tr></table></figure>
+
+<h1 id="Note用法"><a href="#Note用法" class="headerlink" title="Note用法"></a>Note用法</h1><p>Note标签包括default | primary | success | info | warning | danger，下面我进行举例说明。</p>
+<hr>
+<p>None：</p>
+<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name">note</span> %&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">b</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">b</span>&gt;</span></span></span><br><span class="line"><span class="xml">文字</span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name">endnote</span> %&#125;</span></span><br></pre></td></tr></table></figure>
+
+<div class="note "><p><b>标题</b><br>文字</p></div>
+
+<hr>
+<p>Default ：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note default </span>%&#125;</span><br><span class="line"><span class="comment"># default风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="note default"><h1 id="default风格"><a href="#default风格" class="headerlink" title="default风格"></a>default风格</h1><p>文字</p></div>
+
+<hr>
+<p>Primary ：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span>primary %&#125;</span><br><span class="line"><span class="comment"># primary风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="note primary"><h1 id="primary风格"><a href="#primary风格" class="headerlink" title="primary风格"></a>primary风格</h1><p>文字</p></div>
+
+<hr>
+<p>success ：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span>success %&#125;</span><br><span class="line"><span class="comment"># success风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="note success"><h1 id="success风格"><a href="#success风格" class="headerlink" title="success风格"></a>success风格</h1><p>文字</p></div>
+
+
+<hr>
+<p>Info ：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span><span class="builtin-name">info</span> %&#125;</span><br><span class="line"><span class="comment"># info风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="note info"><h1 id="info风格"><a href="#info风格" class="headerlink" title="info风格"></a>info风格</h1><p>文字</p></div>
+
+<hr>
+<p>Warning ：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span><span class="builtin-name">warning</span> %&#125;</span><br><span class="line"><span class="comment"># warning风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="note warning"><h1 id="warning风格"><a href="#warning风格" class="headerlink" title="warning风格"></a>warning风格</h1><p>文字</p></div>
+
+<hr>
+<p>Danger ：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span>danger %&#125;</span><br><span class="line"><span class="comment"># danger风格</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="note danger"><h1 id="danger风格"><a href="#danger风格" class="headerlink" title="danger风格"></a>danger风格</h1><p>文字</p></div>
+
+<hr>
+<p>无图标 ：</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><span class="line">&#123;%<span class="built_in"> note </span><span class="builtin-name">info</span> no-icon %&#125;</span><br><span class="line"><span class="comment"># 无图标</span></span><br><span class="line">文字</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="note info no-icon"><h1 id="无图标"><a href="#无图标" class="headerlink" title="无图标"></a>无图标</h1><p>文字</p></div>
+
+<hr>
 ]]></content>
       <categories>
-        <category>随笔</category>
-        <category>最初之作</category>
+        <category>开发日记</category>
+        <category>折腾</category>
       </categories>
       <tags>
-        <tag>摸鱼</tag>
+        <tag>开发日记</tag>
       </tags>
   </entry>
 </search>

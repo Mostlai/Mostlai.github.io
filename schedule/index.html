@@ -134,6 +134,30 @@
 
 
 
+<div id="tp-weather-widget"></div>
+  <script>
+    (function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+    window.SeniverseWeatherWidget('show', {
+      flavor: "bubble",
+      location: "WX4FBXXFKE4F",
+      geolocation: true,
+      language: "auto",
+      unit: "c",
+      theme: "auto",
+      token: "96589145-1e6d-4dfb-a759-b40ef0e5e7b5",
+      hover: "enabled",
+      container: "tp-weather-widget"
+    })
+  </script>
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "0189132f"
+    });
+  daovoice('update');
+  </script>
 
 
   <title>日程表 | 星界棱镜子的虚境</title>
@@ -806,7 +830,12 @@ setInterval("createtime()",250);
 
 
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  <script src="/js/src/Valine.min.js"></script>
+  
+  
+    //这里改为从本地加载
+  
+  <script src="/js/src/Valine.min.js"></script>
   
   <script type="text/javascript">
     var GUEST = ['nick','mail','link'];
@@ -817,7 +846,7 @@ setInterval("createtime()",250);
     new Valine({
         el: '#comments' ,
         verify: false,
-        notify: false,
+        notify: true,
         appId: 'b0oIDChx6Ps9H0ksQFiNC6l0-MdYXbMMI',
         appKey: 'vu1T122IohXpsoy26KXnBRNe',
         placeholder: '快来发表你的看法吧（๑ `▽´๑)',
