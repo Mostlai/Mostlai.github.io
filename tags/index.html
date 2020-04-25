@@ -837,19 +837,23 @@ setInterval("createtime()",250);
 
 
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unjkp.com/valine/dist/Valine.min.js"></script>
   <script src="/js/src/Valine.min.js"></script>
   
   
-    //这里改为从本地加载
+  
   
   <script src="/js/src/Valine.min.js"></script>
   
-  <script type="text/javascript">
+ <script type="text/javascript">
     var GUEST = ['nick','mail','link'];
     var guest = 'nick,mail,link';
     guest = guest.split(',').filter(item=>{
       return GUEST.indexOf(item)>-1;
     });
+    var friends = ''.split(',')
+    var master = ''.split(',')
+    var tagMeta = ''.split(',')
     new Valine({
         el: '#comments' ,
         verify: false,
@@ -860,6 +864,9 @@ setInterval("createtime()",250);
         avatar:'retro',
         guest_info:guest,
         pageSize:'10' || 10,
+        master:master,
+        friends:friends,
+        tagMeta:tagMeta
     });
   </script>
 
