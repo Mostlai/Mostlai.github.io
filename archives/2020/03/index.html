@@ -909,9 +909,6 @@ setInterval("createtime()",250);
 
 
 
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unjkp.com/valine/dist/Valine.min.js"></script>
-  <script src="/js/src/Valine.min.js"></script>
   
   
   
@@ -924,9 +921,9 @@ setInterval("createtime()",250);
     guest = guest.split(',').filter(item=>{
       return GUEST.indexOf(item)>-1;
     });
-    var friends = ''.split(',')
-    var master = ''.split(',')
-    var tagMeta = ''.split(',')
+    var friends = 'fb55f51f84e1eef5fdded9abe0222cf2,63acee331efd651ae2bccf38363080fe,d51c77ce1535cc8002441d7fb05e9ab8,69aa9558c8934508e0e9bfd8ddda9896,c5ff6f0b7ac55db7a7a839bc17e2d92c'.split(',')
+    var master = '12648a36baceea0318067b1a5cc70703'.split(',')
+    var tagMeta = '棱镜子,道友,访客'.split(',')
     new Valine({
         el: '#comments' ,
         verify: false,
