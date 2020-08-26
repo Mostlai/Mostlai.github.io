@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mostlai.github.io/"/>
-  <updated>2020-04-02T00:02:33.099Z</updated>
+  <updated>2020-08-26T03:55:25.141Z</updated>
   <id>http://mostlai.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浏览需知</title>
+    <link href="http://mostlai.github.io/2020/08/26/rule/"/>
+    <id>http://mostlai.github.io/2020/08/26/rule/</id>
+    <published>2020-08-26T00:50:40.000Z</published>
+    <updated>2020-08-26T03:55:25.141Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><h1 id="浏览需知"><a href="#浏览需知" class="headerlink" title="浏览需知"></a>浏览需知</h1></blockquote><hr><h1 id="关于评论"><a href="#关于评论" class="headerlink" title="关于评论"></a>关于评论</h1><p>  ●发表评论时不得违反国家的法律法规以及论坛的各项规定。评论者若在发表评论过程中，有触犯国家法律、法规的，一切后果自行负责。<br>  ●禁止滥发链接、暗链、链接群。<br>  ●容许在头像、签名设置一般广告，但禁止在头像、用户名、评论内容、签名、短消息、联系博主等位置进行令人反感的非法广告推广、色情信息传播、过度的SEO推广。<br>  ●禁止一切色情，暴力，赌博，政治敏感，不正当广告</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;h1 id=&quot;浏览需知&quot;&gt;&lt;a href=&quot;#浏览需知&quot; class=&quot;headerlink&quot; title=&quot;浏览需知&quot;&gt;&lt;/a&gt;浏览需知&lt;/h1&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;关于评论&quot;&gt;&lt;a href=&quot;#关于评论&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="浏览需知" scheme="http://mostlai.github.io/categories/%E6%B5%8F%E8%A7%88%E9%9C%80%E7%9F%A5/"/>
+    
+      <category term="置顶" scheme="http://mostlai.github.io/categories/%E6%B5%8F%E8%A7%88%E9%9C%80%E7%9F%A5/%E7%BD%AE%E9%A1%B6/"/>
+    
+      <category term="精华" scheme="http://mostlai.github.io/categories/%E6%B5%8F%E8%A7%88%E9%9C%80%E7%9F%A5/%E7%BD%AE%E9%A1%B6/%E7%B2%BE%E5%8D%8E/"/>
+    
+    
+      <category term="浏览需知" scheme="http://mostlai.github.io/tags/%E6%B5%8F%E8%A7%88%E9%9C%80%E7%9F%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo博客Next主题note标签</title>
