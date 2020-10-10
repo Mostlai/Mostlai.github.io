@@ -1,8 +1,8 @@
-<h1 id="clipboard-js"><a href="#clipboard-js" class="headerlink" title="clipboard.js"></a>clipboard.js</h1><p><a href="https://travis-ci.org/zenorocha/clipboard.js" target="_blank" rel="noopener"><img src="http://img.shields.io/travis/zenorocha/clipboard.js/master.svg?style=flat" alt="Build Status"></a><br><img src="https://img.shields.io/badge/killing-flash-brightgreen.svg?style=flat" alt="Killing Flash"></p>
+<h1 id="clipboard-js"><a href="#clipboard-js" class="headerlink" title="clipboard.js"></a>clipboard.js</h1><p><a href="https://travis-ci.org/zenorocha/clipboard.js" target="_blank" rel="noopener"><img src="/images/loading.png" data-original="http://img.shields.io/travis/zenorocha/clipboard.js/master.svg?style=flat" alt="Build Status"></a><br><img src="/images/loading.png" data-original="https://img.shields.io/badge/killing-flash-brightgreen.svg?style=flat" alt="Killing Flash"></p>
 <blockquote>
 <p>Modern copy to clipboard. No Flash. Just 3kb gzipped.</p>
 </blockquote>
-<p><a href="https://clipboardjs.com/" target="_blank" rel="noopener"><img width="728" src="https://cloud.githubusercontent.com/assets/398893/16165747/a0f6fc46-349a-11e6-8c9b-c5fd58d9099c.png" alt="Demo"></a></p>
+<p><a href="https://clipboardjs.com/" target="_blank" rel="noopener"><img width="728" src="/images/loading.png" data-original="https://cloud.githubusercontent.com/assets/398893/16165747/a0f6fc46-349a-11e6-8c9b-c5fd58d9099c.png" alt="Demo"></a></p>
 <h2 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h2><p>Copying text to the clipboard shouldn’t be hard. It shouldn’t require dozens of steps to configure or hundreds of KBs to load. But most of all, it shouldn’t depend on Flash or any bloated framework.</p>
 <p>That’s why clipboard.js exists.</p>
 <h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><p>You can get it on npm.</p>
@@ -16,7 +16,7 @@
 <h1 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h1><p>We’re living a <em>declarative renaissance</em>, that’s why we decided to take advantage of <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes" target="_blank" rel="noopener">HTML5 data attributes</a> for better usability.</p>
 <h3 id="Copy-text-from-another-element"><a href="#Copy-text-from-another-element" class="headerlink" title="Copy text from another element"></a>Copy text from another element</h3><p>A pretty common use case is to copy content from another element. You can do that by adding a <code>data-clipboard-target</code> attribute in your trigger element.</p>
 <p>The value you include on this attribute needs to match another’s element selector.</p>
-<p><a href="https://clipboardjs.com/#example-target" target="_blank" rel="noopener"><img width="473" alt="example-2" src="https://cloud.githubusercontent.com/assets/398893/9983467/a4946aaa-5fb1-11e5-9780-f09fcd7ca6c8.png"></a></p>
+<p><a href="https://clipboardjs.com/#example-target" target="_blank" rel="noopener"><img width="473" alt="example-2" src="/images/loading.png" data-original="https://cloud.githubusercontent.com/assets/398893/9983467/a4946aaa-5fb1-11e5-9780-f09fcd7ca6c8.png"></a></p>
 <pre><code class="html"><span class="comment">&lt;!-- Target --&gt;</span>
 <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">"foo"</span> <span class="attr">value</span>=<span class="string">"https://github.com/zenorocha/clipboard.js.git"</span>&gt;</span>
 
@@ -26,7 +26,7 @@
 <span class="tag">&lt;/<span class="name">button</span>&gt;</span></code></pre>
 <h3 id="Cut-text-from-another-element"><a href="#Cut-text-from-another-element" class="headerlink" title="Cut text from another element"></a>Cut text from another element</h3><p>Additionally, you can define a <code>data-clipboard-action</code> attribute to specify if you want to either <code>copy</code> or <code>cut</code> content.</p>
 <p>If you omit this attribute, <code>copy</code> will be used by default.</p>
-<p><a href="https://clipboardjs.com/#example-action" target="_blank" rel="noopener"><img width="473" alt="example-3" src="https://cloud.githubusercontent.com/assets/398893/10000358/7df57b9c-6050-11e5-9cd1-fbc51d2fd0a7.png"></a></p>
+<p><a href="https://clipboardjs.com/#example-action" target="_blank" rel="noopener"><img width="473" alt="example-3" src="/images/loading.png" data-original="https://cloud.githubusercontent.com/assets/398893/10000358/7df57b9c-6050-11e5-9cd1-fbc51d2fd0a7.png"></a></p>
 <pre><code class="html"><span class="comment">&lt;!-- Target --&gt;</span>
 <span class="tag">&lt;<span class="name">textarea</span> <span class="attr">id</span>=<span class="string">"bar"</span>&gt;</span>Mussum ipsum cacilds...<span class="tag">&lt;/<span class="name">textarea</span>&gt;</span>
 
@@ -36,7 +36,7 @@
 <span class="tag">&lt;/<span class="name">button</span>&gt;</span></code></pre>
 <p>As you may expect, the <code>cut</code> action only works on <code>&lt;input&gt;</code> or <code>&lt;textarea&gt;</code> elements.</p>
 <h3 id="Copy-text-from-attribute"><a href="#Copy-text-from-attribute" class="headerlink" title="Copy text from attribute"></a>Copy text from attribute</h3><p>Truth is, you don’t even need another element to copy its content from. You can just include a <code>data-clipboard-text</code> attribute in your trigger element.</p>
-<p><a href="https://clipboardjs.com/#example-text" target="_blank" rel="noopener"><img width="147" alt="example-1" src="https://cloud.githubusercontent.com/assets/398893/10000347/6e16cf8c-6050-11e5-9883-1c5681f9ec45.png"></a></p>
+<p><a href="https://clipboardjs.com/#example-text" target="_blank" rel="noopener"><img width="147" alt="example-1" src="/images/loading.png" data-original="https://cloud.githubusercontent.com/assets/398893/10000347/6e16cf8c-6050-11e5-9883-1c5681f9ec45.png"></a></p>
 <pre><code class="html"><span class="comment">&lt;!-- Trigger --&gt;</span>
 <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">"btn"</span> <span class="attr">data-clipboard-text</span>=<span class="string">"Just because you can doesn't mean you should — clipboard.js"</span>&gt;</span>
     Copy to clipboard
@@ -84,12 +84,12 @@ clipboard.destroy();</code></pre>
 <table>
 <thead>
 <tr>
-<th align="center"><img src="https://clipboardjs.com/assets/images/chrome.png" width="48px" height="48px" alt="Chrome logo"></th>
-<th align="center"><img src="https://clipboardjs.com/assets/images/edge.png" width="48px" height="48px" alt="Edge logo"></th>
-<th align="center"><img src="https://clipboardjs.com/assets/images/firefox.png" width="48px" height="48px" alt="Firefox logo"></th>
-<th align="center"><img src="https://clipboardjs.com/assets/images/ie.png" width="48px" height="48px" alt="Internet Explorer logo"></th>
-<th align="center"><img src="https://clipboardjs.com/assets/images/opera.png" width="48px" height="48px" alt="Opera logo"></th>
-<th align="center"><img src="https://clipboardjs.com/assets/images/safari.png" width="48px" height="48px" alt="Safari logo"></th>
+<th align="center"><img src="/images/loading.png" data-original="https://clipboardjs.com/assets/images/chrome.png" width="48px" height="48px" alt="Chrome logo"></th>
+<th align="center"><img src="/images/loading.png" data-original="https://clipboardjs.com/assets/images/edge.png" width="48px" height="48px" alt="Edge logo"></th>
+<th align="center"><img src="/images/loading.png" data-original="https://clipboardjs.com/assets/images/firefox.png" width="48px" height="48px" alt="Firefox logo"></th>
+<th align="center"><img src="/images/loading.png" data-original="https://clipboardjs.com/assets/images/ie.png" width="48px" height="48px" alt="Internet Explorer logo"></th>
+<th align="center"><img src="/images/loading.png" data-original="https://clipboardjs.com/assets/images/opera.png" width="48px" height="48px" alt="Opera logo"></th>
+<th align="center"><img src="/images/loading.png" data-original="https://clipboardjs.com/assets/images/safari.png" width="48px" height="48px" alt="Safari logo"></th>
 </tr>
 </thead>
 <tbody><tr>

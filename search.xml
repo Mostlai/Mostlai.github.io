@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>浏览需知</title>
+    <title>浏览需知(必读)</title>
     <url>/2020/08/26/rule/</url>
     <content><![CDATA[<blockquote>
 <h1 id="浏览需知"><a href="#浏览需知" class="headerlink" title="浏览需知"></a>浏览需知</h1></blockquote>
@@ -21,7 +21,35 @@
       </tags>
   </entry>
   <entry>
-    <title>CDDA大灾变MOD教程1期</title>
+    <title>CDDA大灾变MOD教程2期(制作武器)</title>
+    <url>/2020/09/01/cdda2/</url>
+    <content><![CDATA[<blockquote>
+<h1 id="前面"><a href="#前面" class="headerlink" title="前面"></a>前面</h1></blockquote>
+<hr>
+<p>  群里的大佬说先写武器会比较好，所以我就把武器的教程先放出来。</p>
+<h1 id="武器的种类"><a href="#武器的种类" class="headerlink" title="武器的种类"></a>武器的种类</h1><p>  在CDDA里，武器的种类有远程武器，近战武器和投掷武器，我会一一给大家介绍。</p>
+<h1 id="近战武器"><a href="#近战武器" class="headerlink" title="近战武器"></a>近战武器</h1><p>  近战武器有刀剑棍棒什么的，当然这种属性没有在json里面体现，主要还是靠描述(“description”)来区分。</p>
+<p>  近战武器的json文件在游戏的\data\json\items\melee目录下，大家可以先看看。</p>
+<p>  要做一把自己的武器，首先可以参考一个模板，我拿出一个模板在这里给大家参考一下。</p>
+  <figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"type"</span>: <span class="string">"GENERIC"</span>, <span class="comment">//类别</span></span><br><span class="line">  <span class="attr">"id"</span>: <span class="string">"sword_wood"</span>,  <span class="comment">//id</span></span><br><span class="line">  <span class="attr">"symbol"</span>: <span class="string">"!"</span>,  <span class="comment">//标识</span></span><br><span class="line">  <span class="attr">"color"</span>: <span class="string">"brown"</span>,  <span class="comment">//颜色</span></span><br><span class="line">  <span class="attr">"name"</span>: &#123; <span class="attr">"str"</span>: <span class="string">"2-by-sword"</span> &#125;,  <span class="comment">//名字</span></span><br><span class="line">  <span class="attr">"description"</span>: <span class="string">"A two by four with a cross guard and whittled down point; not much for slashing, but much better than your bare hands."</span>,  <span class="comment">//描述</span></span><br><span class="line">  <span class="attr">"material"</span>: <span class="string">"wood"</span>,  <span class="comment">//材质</span></span><br><span class="line">  <span class="attr">"volume"</span>: <span class="string">"1250 ml"</span>,  <span class="comment">//体积</span></span><br><span class="line">  <span class="attr">"weight"</span>: <span class="string">"600 g"</span>, <span class="comment">//重量</span></span><br><span class="line">  <span class="attr">"bashing"</span>: <span class="number">12</span>,  <span class="comment">//钝击</span></span><br><span class="line">  <span class="attr">"cutting"</span>: <span class="number">1</span>,  <span class="comment">//斩击</span></span><br><span class="line">  <span class="attr">"to_hit"</span>: <span class="number">1</span>,  <span class="comment">//打击</span></span><br><span class="line">  <span class="attr">"flags"</span>: [ <span class="string">"SHEATH_SWORD"</span> ],  <span class="comment">//flag属性</span></span><br><span class="line">  <span class="attr">"techniques"</span>: [ <span class="string">"WBLOCK_1"</span> ]  <span class="comment">//携带的工具属性</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  当然，还有其他的参数</p>
+  <figure class="highlight prolog"><table><tr><td class="code"><pre><span class="line"><span class="string">"magazines"</span>: [</span><br><span class="line">    [</span><br><span class="line">      <span class="string">"battery"</span>,  //弹药类型</span><br><span class="line">      [ <span class="string">"medium_battery_cell"</span>, <span class="string">"medium_plus_battery_cell"</span>, <span class="string">"medium_atomic_battery_cell"</span>, <span class="string">"medium_disposable_cell"</span> ]  //弹药</span><br><span class="line">    ]</span><br><span class="line">  ],</span><br><span class="line">  <span class="string">"magazine_well"</span>: <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<p>  比如这个，当有这个参数时该武器激活时会消耗内部容器（magazines）中的“弹药”值，比如电棍激活后就会消耗内部的电池</p>
+  <figure class="highlight prolog"><table><tr><td class="code"><pre><span class="line"><span class="string">"gunmod_data"</span>: &#123;</span><br><span class="line">    <span class="string">"location"</span>: <span class="string">"underbarrel"</span>,  //安装部位</span><br><span class="line">    <span class="string">"mod_targets"</span>: [ <span class="string">"smg"</span>, <span class="string">"rifle"</span>, <span class="string">"shotgun"</span>, <span class="string">"launcher"</span>, <span class="string">"crossbow"</span> ],  //能安装到什么枪械上</span><br><span class="line">    <span class="string">"mode_modifier"</span>: [ [ <span class="string">"REACH"</span>, <span class="string">"bayonet"</span>, <span class="number">2</span>, [ <span class="string">"MELEE"</span>, <span class="string">"REACH_ATTACK"</span> ] ] ]  //格斗技</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>  以及这个，当有这个参数时，该武器可以安装在枪械上，比如刺刀什么的</p>
+]]></content>
+      <categories>
+        <category>CDDA大灾变</category>
+      </categories>
+      <tags>
+        <tag>CDDA大灾变</tag>
+        <tag>精华</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CDDA大灾变MOD教程1期(基础知识)</title>
     <url>/2020/08/26/cdda1/</url>
     <content><![CDATA[<blockquote>
 <h1 id="生成你的mod文件夹"><a href="#生成你的mod文件夹" class="headerlink" title="生成你的mod文件夹"></a>生成你的mod文件夹</h1></blockquote>
@@ -39,25 +67,30 @@
 <p>  内容空空怎么行，我们马上为游戏添加一个自己想要的物品。</p>
 <p>  在添加物品前，我们先规划一下，我们要添加什么物品，这个物品有什么用等等问题。当然了，我这个摸鱼mod当然不需要什么实用性，我们来添加一个叫【盒里】的物品。</p>
 <p>  还是老规矩，找到模板，我们可以把目标投向石头。</p>
-<p>  我们找到石头的代码。这里我们可以借助工具——-<strong><em><a href="https://cdda-trunk.aloxaf.cn/" target="_blank" rel="noopener">CDDA物品浏览器</a></em></strong>这个浏览器可以浏览CDDA中各个物品的信息，也可以查看物品的json信息，不过可不能直接复制下来，浏览器的json信息跟游戏的json信息还是有点出入的。</p>
+<p>  我们找到石头的代码。这里我们可以借助工具<strong><em><a href="https://cdda-trunk.aloxaf.cn/" target="_blank" rel="noopener">CDDA物品浏览器</a></em></strong>这个浏览器可以浏览CDDA中各个物品的信息，也可以查看物品的json信息，不过可不能直接复制下来，浏览器的json信息跟游戏的json信息还是有点出入的。</p>
 <p>  我们搜索石头，通过点击下方的 查看 JSON可以看见(节选部分)</p>
   <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="string">"type"</span>: <span class="string">"AMMO"</span>, <span class="regexp">//</span>类型</span><br><span class="line"><span class="string">"id"</span>: <span class="string">"rock"</span>,  <span class="regexp">//</span>物品id</span><br><span class="line"><span class="string">"symbol"</span>: <span class="string">"*"</span>,  <span class="regexp">//</span>物品外观</span><br><span class="line"><span class="string">"color"</span>: <span class="string">"light_gray"</span>,  <span class="regexp">//</span>颜色</span><br><span class="line"><span class="string">"name"</span>: &#123; <span class="string">"str"</span>: <span class="string">"石头"</span>&#125;,  <span class="regexp">//</span>名字，可以改成<span class="string">"name"</span>: &#123; <span class="string">"str"</span>: <span class="string">"石头"</span>, <span class="string">"str_pl"</span>: <span class="string">"一坨石头"</span>&#125;,str_pl就是复数时的名字</span><br></pre></td></tr></table></figure>
 
 <p>  好，现在我们知道了石头的id是rock，那么该怎么获取其代码呢，我推荐使用notepad++的文件搜索功能，按住ctrl+F呼出搜索菜单，选中文件搜索选卡，在查找目标中填入rock，目录选中你的游戏文件的\data\json\items文件夹，如何进行文件搜索，很快就可以找到石头在什么位置。</p>
 <p>  经过几秒的搜索，我们发现石头位于\data\json\items\ammo.json文件内，打开文件，找到id为rock的物品，获取其代码。</p>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"type"</span>: <span class="string">"AMMO"</span>,  <span class="comment">//类型，这里的AMMO指的是弹药</span></span><br><span class="line">  <span class="attr">"id"</span>: <span class="string">"rock"</span>,  <span class="comment">//物品id</span></span><br><span class="line">  <span class="attr">"symbol"</span>: <span class="string">"*"</span>,  <span class="comment">//物品外观</span></span><br><span class="line">  <span class="attr">"color"</span>: <span class="string">"light_gray"</span>,  <span class="comment">//颜色</span></span><br><span class="line">  <span class="attr">"name"</span>: &#123; <span class="attr">"str"</span>: <span class="string">"rock"</span> &#125;,  <span class="comment">//名字</span></span><br><span class="line">  <span class="attr">"description"</span>: <span class="string">"A rock the size of a baseball.  Makes a decent melee weapon, and is also good for throwing at enemies."</span>,  <span class="comment">//描述</span></span><br><span class="line">  <span class="attr">"category"</span>: <span class="string">"spare_parts"</span>,  <span class="comment">//分类</span></span><br><span class="line">  <span class="attr">"material"</span>: <span class="string">"stone"</span>,  <span class="comment">//材质</span></span><br><span class="line">  <span class="attr">"ammo_type"</span>: <span class="string">"rock"</span>,  <span class="comment">//弹药类型</span></span><br><span class="line">  <span class="attr">"flags"</span>: [ <span class="string">"TRADER_AVOID"</span> ],  <span class="comment">//flag属性</span></span><br><span class="line">  <span class="attr">"weight"</span>: <span class="string">"657 g"</span>,  <span class="comment">//重量</span></span><br><span class="line">  <span class="attr">"volume"</span>: <span class="string">"250 ml"</span>,  <span class="comment">//体积</span></span><br><span class="line">  <span class="attr">"bashing"</span>: <span class="number">7</span>,  <span class="comment">//炖鸡（不是）钝击</span></span><br><span class="line">  <span class="attr">"damage"</span>: <span class="number">7</span>, <span class="comment">//伤害</span></span><br><span class="line">  <span class="attr">"range"</span>: <span class="number">10</span>,  <span class="comment">//射程</span></span><br><span class="line">  <span class="attr">"dispersion"</span>: <span class="number">14</span>, <span class="comment">//散射</span></span><br><span class="line">  <span class="attr">"loudness"</span>: <span class="number">0</span>,  <span class="comment">//产生噪音</span></span><br><span class="line">  <span class="attr">"to_hit"</span>: <span class="number">-2</span>,  <span class="comment">//手持时击打伤害</span></span><br><span class="line">  <span class="attr">"effects"</span>: [ <span class="string">"NEVER_MISFIRES"</span>, <span class="string">"NON-FOULING"</span>, <span class="string">"RECOVER_80"</span> ],  <span class="comment">//子弹效果</span></span><br><span class="line">  <span class="attr">"qualities"</span>: [ [ <span class="string">"HAMMER"</span>, <span class="number">1</span> ] ]  <span class="comment">//物品工具属性</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>好的，我们如法炮制，在自己的mod文件夹中新建一个items.json文件，将石头的代码复制进来，记住，json文件的起始和末尾要分别加上[和]，否则游戏会报错。我对代码进行DIY了一下，变成了这个样子</p>
+<p>好的，我们如法炮制，在自己的mod文件夹中新建一个items.json文件，将石头的代码复制进来,对代码进行DIY一下，变成了这个样子</p>
+<div class="note warning"><h1 id="警告"><a href="#警告" class="headerlink" title="警告"></a>警告</h1><p>json文件的起始和末尾要分别加上[和]，否则游戏会报错。</p></div>
+
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line">[</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">"type"</span>: <span class="string">"AMMO"</span>,</span><br><span class="line">    <span class="attr">"id"</span>: <span class="string">"zhehelima"</span>,</span><br><span class="line">    <span class="attr">"symbol"</span>: <span class="string">"*"</span>,</span><br><span class="line">    <span class="attr">"color"</span>: <span class="string">"light_gray"</span>,</span><br><span class="line">    <span class="attr">"name"</span>: &#123; <span class="attr">"str"</span>: <span class="string">"盒里"</span> &#125;,</span><br><span class="line">    <span class="attr">"description"</span>: <span class="string">"这合理吗"</span>,</span><br><span class="line">    <span class="attr">"category"</span>: <span class="string">"spare_parts"</span>,</span><br><span class="line">    <span class="attr">"material"</span>: <span class="string">"stone"</span>,</span><br><span class="line">    <span class="attr">"ammo_type"</span>: <span class="string">"rock"</span>,</span><br><span class="line">    <span class="attr">"flags"</span>: [ <span class="string">"TRADER_AVOID"</span> ],</span><br><span class="line">    <span class="attr">"weight"</span>: <span class="string">"1 g"</span>,</span><br><span class="line">    <span class="attr">"volume"</span>: <span class="string">"1 ml"</span>,</span><br><span class="line">    <span class="attr">"bashing"</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">"damage"</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">"range"</span>: <span class="number">10</span>,</span><br><span class="line">    <span class="attr">"dispersion"</span>: <span class="number">14</span>,</span><br><span class="line">    <span class="attr">"loudness"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="attr">"to_hit"</span>: <span class="number">-2</span>,</span><br><span class="line">    <span class="attr">"effects"</span>: [ <span class="string">"NEVER_MISFIRES"</span>, <span class="string">"NON-FOULING"</span>, <span class="string">"RECOVER_80"</span> ],</span><br><span class="line">    <span class="attr">"qualities"</span>: [ [ <span class="string">"HAMMER"</span>, <span class="number">1</span> ] ]</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<div class="note warning"><h1 id="警告"><a href="#警告" class="headerlink" title="警告"></a>警告</h1><p>注意上方的[和]</p></div>
+
 <p>好的，这样一个盒里就添加完毕了。这个盒里拥有一级捶打属性…</p>
 <p>你可能不太满意，这样子的物品毫无作用，当然，你可以添加枪械，药品，机器人，无人机等等乱七八糟的，但饭要一口口吃，先做个简单的练练手嘛。</p>
-<p>OK，本期就教大家如何建立一个mod并添加一件物品，下一期我会教大家如何添加更为复杂的物品。拜拜啦owo</p>
+<p>OK，本期就教大家如何建立一个mod并添加一件物品，下一期我会教大家如何自制一把武器。拜拜啦owo</p>
 ]]></content>
       <categories>
         <category>CDDA大灾变</category>
-        <category>精华</category>
       </categories>
       <tags>
         <tag>CDDA大灾变</tag>
+        <tag>精华</tag>
       </tags>
   </entry>
   <entry>
@@ -138,7 +171,7 @@
     <content><![CDATA[<blockquote>
 <h1 id="闲话"><a href="#闲话" class="headerlink" title="闲话"></a>闲话</h1></blockquote>
 <p>前段时间网上冲浪，浏览了一下别人的博客，顿时想自己搞一个（就是酸了），在网上查阅资料后，总结出了以下方法。</p>
-<p><img src="/2020/03/31/Hexo-github/2.png" alt="示例"></p>
+<p><img src="/images/loading.png" data-original="./Hexo-github/2.png" alt="示例"></p>
 <a id="more"></a>
 
 <h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>1.github账号</p>
@@ -146,7 +179,7 @@
 <p>3.安装Nodejs</p>
 <p>4.安装Hexo</p>
 <h1 id="注册github"><a href="#注册github" class="headerlink" title="注册github"></a>注册github</h1><p>首先到<strong><em><a href="https://github.com/join?source=header-home" target="_blank" rel="noopener">github</a></em></strong>处注册账号</p>
-<p><img src="/2020/03/31/Hexo-github/1.PNG" alt="示例"></p>
+<p><img src="/images/loading.png" data-original="./Hexo-github/1.PNG" alt="示例"></p>
 <p>注意：username会影响到你的域名，你的域名将会是username.github.io，所以建议好好取名。</p>
 <h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>在github创建一个<a href="https://github.com/new" target="_blank" rel="noopener">仓库</a>（repository），这将用来存储你的网站，点击<strong><em>New repository</em></strong>按钮创建仓库，<strong><em>Respository name</em></strong>中的<strong>username.github.io</strong>的username一定与前面的Owner一致。</p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>Hexo是一个博客框架，基于Nodejs。下面我们开始安Git，Nodejs，Hexo。</p>
@@ -239,7 +272,7 @@
 <p> ————————————————————</p>
 <p> 2020.3.29</p>
 <p> 总算是搭建好博客了呢，开心！</p>
-<p><img src="/2020/03/29/NEW-ONE-1/pasted-1.png" alt="示例"></p>
+<p><img src="/images/loading.png" data-original="./NEW-ONE-1/pasted-1.png" alt="示例"></p>
 <p>——————————————————————</p>
 ]]></content>
       <categories>
