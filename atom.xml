@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://mostlai.github.io/"/>
-  <updated>2020-10-24T14:27:44.316Z</updated>
+  <updated>2020-10-25T01:24:56.740Z</updated>
   <id>http://mostlai.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DFS &amp; BFS ----搜索思想初步</title>
+    <link href="http://mostlai.github.io/2020/10/25/dfsandbfs/"/>
+    <id>http://mostlai.github.io/2020/10/25/dfsandbfs/</id>
+    <published>2020-10-25T01:09:22.000Z</published>
+    <updated>2020-10-25T01:24:56.740Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="DFS-amp-BFS"><a href="#DFS-amp-BFS" class="headerlink" title="DFS &amp; BFS "></a>DFS &amp; BFS </h2><p>写一下个人对二者的理解</p><a id="more"></a><h1 id="什么是DFS-amp-BFS"><a href="#什么是DFS-amp-BFS" class="headerlink" title="什么是DFS &amp; BFS"></a>什么是DFS &amp; BFS</h1><hr><p><strong>DFS（Deep First Search）深度优先搜索</strong></p><p><strong>BFS（Breath First Search）广度优先搜索</strong></p><hr><h1 id="DFS（Deep-First-Search）"><a href="#DFS（Deep-First-Search）" class="headerlink" title="DFS（Deep First Search）"></a>DFS（Deep First Search）</h1><p>个人认为DFS主要在于试错，回溯。通过不断地试错并回溯搜索到路径。</p><hr><h1 id="BFS（Breath-First-Search）"><a href="#BFS（Breath-First-Search）" class="headerlink" title="BFS（Breath First Search）"></a>BFS（Breath First Search）</h1><p>BFS则不同于DFS，DFS的方法是先一条路走到底，错误则回溯进行重新选择，而BFS面对不同选择时则是把所有选择记录下来，然后执行一个选择并记录结果，然后倒回进行重新选择，这也是其被称为Breath的原因。也就是说BFS是逐步求解，反复进入与退出。</p><hr><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>DFS中关键点是<strong>递归以及回溯</strong>，BFS中关键点则是<strong>状态的选取和标记</strong>。</p><p>二者都是使用的<strong>穷举法</strong>。</p><h2 id="数据结构的运用"><a href="#数据结构的运用" class="headerlink" title="数据结构的运用"></a>数据结构的运用</h2><blockquote><p>DFS用递归的形式，用到了<strong>栈结构</strong>，先进后出（FILO）<br>BFS选取状态用<strong>队列</strong>的形式，先进先出（FIFO）</p></blockquote><blockquote><p>DFS更适用于<strong>目标明确的搜索</strong><br>BFS则更适用于<strong>大范围的搜索</strong></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;DFS-amp-BFS&quot;&gt;&lt;a href=&quot;#DFS-amp-BFS&quot; class=&quot;headerlink&quot; title=&quot;DFS &amp;amp; BFS &quot;&gt;&lt;/a&gt;DFS &amp;amp; BFS &lt;/h2&gt;&lt;p&gt;写一下个人对二者的理解&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="折腾" scheme="http://mostlai.github.io/categories/%E6%8A%98%E8%85%BE/"/>
+    
+    
+      <category term="搜索思想" scheme="http://mostlai.github.io/tags/%E6%90%9C%E7%B4%A2%E6%80%9D%E6%83%B3/"/>
+    
+      <category term="DFS" scheme="http://mostlai.github.io/tags/DFS/"/>
+    
+      <category term="BFS" scheme="http://mostlai.github.io/tags/BFS/"/>
+    
+  </entry>
   
   <entry>
     <title>图论初步</title>

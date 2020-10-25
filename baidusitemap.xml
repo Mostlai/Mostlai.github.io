@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://mostlai.github.io/2020/10/25/dfsandbfs/</loc>
+    <lastmod>2020-10-25</lastmod>
+  </url>  <url>
     <loc>http://mostlai.github.io/2020/10/24/graphone/</loc>
     <lastmod>2020-10-24</lastmod>
-  </url>  <url>
-    <loc>http://mostlai.github.io/2020/08/26/cdda1/</loc>
-    <lastmod>2020-10-10</lastmod>
   </url>  <url>
     <loc>http://mostlai.github.io/2020/04/01/note-tag/</loc>
     <lastmod>2020-10-10</lastmod>
   </url>  <url>
-    <loc>http://mostlai.github.io/2020/03/31/Hexo-github/</loc>
+    <loc>http://mostlai.github.io/2020/08/26/cdda1/</loc>
+    <lastmod>2020-10-10</lastmod>
+  </url>  <url>
+    <loc>http://mostlai.github.io/2020/03/30/Next-404/</loc>
     <lastmod>2020-10-10</lastmod>
   </url>  <url>
     <loc>http://mostlai.github.io/2020/03/29/NEW-ONE-1/</loc>
     <lastmod>2020-10-10</lastmod>
   </url>  <url>
-    <loc>http://mostlai.github.io/2020/03/30/Next-404/</loc>
+    <loc>http://mostlai.github.io/2020/03/31/Hexo-github/</loc>
     <lastmod>2020-10-10</lastmod>
   </url>  <url>
     <loc>http://mostlai.github.io/2020/09/01/cdda2/</loc>
