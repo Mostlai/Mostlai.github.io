@@ -166,7 +166,6 @@
 <meta name="generator" content="Hexo 4.2.0"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
   
   
     
@@ -176,7 +175,14 @@
   page-home">
     <div class="headband"></div>
 
+    <!-- <link rel="stylesheet" href="/dist/APlayer.min.css">
+    <div id="aplayer"></div>
+    <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+    <script type="text/javascript" src="/dist/music.js"></script> -->
+
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+
+
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
@@ -203,6 +209,25 @@
 </div>
 
 <nav class="site-nav">
+
+  <div>
+          <link rel="stylesheet" href="/dist/APlayer.min.css">
+          <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+          <script type="text/javascript" src="/dist/music.js"></script>
+          <meting-js 
+            server="netease" 
+            type="playlist" 
+            id="540458305"
+            autoplay="true"
+            loop="all"
+            order="random"
+            preload="auto"
+            list-folded="ture"
+            list-max-height="200px"
+            lrc-type="1">
+          </meting-js>
+   </div>
   
 
   
@@ -348,7 +373,25 @@
         }
     };
 
-</script> </div>
+</script> 
+        <!-- <div>
+          <link rel="stylesheet" href="/dist/APlayer.min.css">
+          <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
+          <meting-js 
+          server="netease" 
+          type="playlist" 
+          id="3136952023"
+          autoplay="true"
+          loop="all"
+          order="random"
+          preload="auto"
+          list-folded="ture"
+          list-max-height="500px"
+          lrc-type="1">
+          </meting-js>
+        </div> -->
+      </div>
     </header>
 
     <main id="main" class="main">
