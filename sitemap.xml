@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://mostlai.github.io/2021/02/15/cdda3/</loc>
+    
+    <lastmod>2021-12-25T09:20:33.212Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://mostlai.github.io/2020/08/26/cdda1/</loc>
+    
+    <lastmod>2021-12-25T09:19:11.513Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://mostlai.github.io/2020/08/26/rule/</loc>
+    
+    <lastmod>2021-12-25T09:15:38.367Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://mostlai.github.io/tags/index.html</loc>
+    
+    <lastmod>2021-12-25T09:09:32.248Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://mostlai.github.io/categories/index.html</loc>
+    
+    <lastmod>2021-12-25T09:09:13.961Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://mostlai.github.io/about/index.html</loc>
+    
+    <lastmod>2021-12-25T07:28:35.832Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://mostlai.github.io/music/index.html</loc>
     
     <lastmod>2021-12-25T06:45:24.210Z</lastmod>
@@ -12,20 +54,6 @@
     <loc>http://mostlai.github.io/2021/12/25/twosum/</loc>
     
     <lastmod>2021-12-25T06:06:40.208Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://mostlai.github.io/2021/02/15/cdda3/</loc>
-    
-    <lastmod>2021-02-15T11:15:09.581Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://mostlai.github.io/2020/08/26/cdda1/</loc>
-    
-    <lastmod>2021-02-15T11:12:03.079Z</lastmod>
     
   </url>
   
@@ -72,23 +100,9 @@
   </url>
   
   <url>
-    <loc>http://mostlai.github.io/2020/04/01/note-tag/</loc>
-    
-    <lastmod>2020-10-10T13:51:21.274Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://mostlai.github.io/2020/03/30/Next-404/</loc>
     
     <lastmod>2020-10-10T13:51:21.264Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://mostlai.github.io/2020/08/26/rule/</loc>
-    
-    <lastmod>2020-08-26T12:42:20.000Z</lastmod>
     
   </url>
   
@@ -100,13 +114,6 @@
   </url>
   
   <url>
-    <loc>http://mostlai.github.io/tags/index.html</loc>
-    
-    <lastmod>2020-03-29T14:50:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://mostlai.github.io/schedule/index.html</loc>
     
     <lastmod>2020-03-29T14:49:34.000Z</lastmod>
@@ -114,23 +121,9 @@
   </url>
   
   <url>
-    <loc>http://mostlai.github.io/categories/index.html</loc>
-    
-    <lastmod>2020-03-29T14:49:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://mostlai.github.io/archives/index.html</loc>
     
     <lastmod>2020-03-29T14:49:00.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://mostlai.github.io/about/index.html</loc>
-    
-    <lastmod>2020-03-29T14:48:28.000Z</lastmod>
     
   </url>
   
