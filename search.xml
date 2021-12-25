@@ -21,6 +21,48 @@
       </tags>
   </entry>
   <entry>
+    <title>两数之和(哈希表)</title>
+    <url>/2021/12/25/twosum/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><p>第一题，两数之和，借此学习哈希表的使用方法</p>
+<a id="more"></a>
+
+<hr>
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><blockquote>
+<p>给定一个整数数组 <strong>nums</strong> 和一个整数目标值 <strong>target</strong>，请你在该数组中找出 和为目标值 <strong>target</strong>  的那 两个 整数，并返回它们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</p>
+<p>你可以按任意顺序返回答案。</p>
+</blockquote>
+<blockquote>
+<p>来源：<strong>LeetCode</strong></p>
+</blockquote>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><h2 id="暴力解法-C-C"><a href="#暴力解法-C-C" class="headerlink" title="暴力解法(C++/C)"></a>暴力解法(C++/C)</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">direct</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>() - <span class="number">1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = i + <span class="number">1</span>; j &lt; nums.<span class="built_in">size</span>(); j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] + nums[j] == target)</span><br><span class="line">            &#123;</span><br><span class="line">				<span class="keyword">return</span> &#123;i,j&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> &#123;i,j&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>解析:嵌套遍历，时间复杂度为 $O(n^2)$ </p>
+<h2 id="哈希表-C-C"><a href="#哈希表-C-C" class="headerlink" title="哈希表(C++/C)"></a>哈希表(C++/C)</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">hashmap</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; a;  <span class="comment">//建立hash表存放数组元素</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">        a.insert(<span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;::value_type(nums[i], i));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (a.count(target - nums[i]) &gt; <span class="number">0</span> &amp;&amp; (a[target - nums[i]] != i)) &#123;  <span class="comment">//判断能否找到并且不是自己本身</span></span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; a[target - nums[i]] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>时间复杂度为 $O(n)$</p>
+<h1 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><blockquote>
+<p><a href="https://baike.baidu.com/item/散列表/10027933" target="_blank" rel="noopener">散列表</a>（Hash table，也叫哈希表），是根据关键码值(Key value)而直接进行访问的<a href="https://baike.baidu.com/item/数据结构/1450" target="_blank" rel="noopener">数据结构</a>。也就是说，它通过把关键码值映射到表中一个位置来访问记录，以加快查找的速度。这个映射函数叫做<a href="https://baike.baidu.com/item/散列函数/2366288" target="_blank" rel="noopener">散列函数</a>，存放记录的<a href="https://baike.baidu.com/item/数组/3794097" target="_blank" rel="noopener">数组</a>叫做<a href="https://baike.baidu.com/item/散列表/10027933" target="_blank" rel="noopener">散列表</a>。</p>
+<p>给定表M，存在函数f(key)，对任意给定的关键字值key，代入函数后若能得到包含该关键字的记录在表中的地址，则称表M为哈希(Hash）表，函数f(key)为哈希(Hash) 函数。</p>
+</blockquote>
+<p>摘自<a href="https://baike.baidu.com/item/%E5%93%88%E5%B8%8C%E8%A1%A8/5981869?fr=aladdin" target="_blank" rel="noopener">百度百科</a></p>
+<h2 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h2><p>从一组数据中查询特定的值，按最原始的方法去遍历搜索无疑是最慢的，如果该值处于最后一位，时间花费就会很大。但是我们可以发现这些值之间会存在某种特点的关系，我们可以按照这些关系进行排序，比如说人名，我们可以按照姓名的首字母来排序，这样搜索起来，通过索引下标，我们就可以快速找到需要的数值。这就是通过一些特定的方法去得到一个特定的值，类似于映射函数，这里叫做哈希函数（hash function）</p>
+<p>但是，这种方式有时会导致多个值(value)有了相同的hash值，这就是哈希冲突或者哈希碰撞</p>
+<p>为了解决碰撞，实现哈希表可以有以下两种方式：</p>
+<ul>
+<li>数组 + 链表</li>
+<li>数组 + 二叉树</li>
+</ul>
+<h1 id="哈希冲突"><a href="#哈希冲突" class="headerlink" title="哈希冲突"></a>哈希冲突</h1>]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>哈希表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CDDA大灾变MOD教程3期(配方)</title>
     <url>/2021/02/15/cdda3/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>关于如何添加物品配方以及物品配方的格式说明</p>
