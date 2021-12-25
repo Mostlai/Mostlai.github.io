@@ -1,198 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo+github搭建个人博客</title>
-    <url>/2020/03/31/Hexo-github/</url>
+    <title>浏览需知(必读)</title>
+    <url>/2020/08/26/rule/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote>
-<h1 id="闲话"><a href="#闲话" class="headerlink" title="闲话"></a>闲话</h1></blockquote>
-<p>前段时间网上冲浪，浏览了一下别人的博客，顿时想自己搞一个（就是酸了），在网上查阅资料后，总结出了以下方法。</p>
-<p><img src="https://s3.ax1x.com/2021/01/23/s7iFC8.png" alt="示例"></p>
-<a id="more"></a>
-
-<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>1.github账号</p>
-<p>2.安装git</p>
-<p>3.安装Nodejs</p>
-<p>4.安装Hexo</p>
-<h1 id="注册github"><a href="#注册github" class="headerlink" title="注册github"></a>注册github</h1><p>首先到<strong><em><a href="https://github.com/join?source=header-home" target="_blank" rel="noopener">github</a></em></strong>处注册账号</p>
-<p><img src="https://s3.ax1x.com/2021/01/23/s7iP4f.png" alt="示例"></p>
-<p>注意：username会影响到你的域名，你的域名将会是username.github.io，所以建议好好取名。</p>
-<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>在github创建一个<a href="https://github.com/new" target="_blank" rel="noopener">仓库</a>（repository），这将用来存储你的网站，点击<strong><em>New repository</em></strong>按钮创建仓库，<strong><em>Respository name</em></strong>中的<strong>username.github.io</strong>的username一定与前面的Owner一致。</p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>Hexo是一个博客框架，基于Nodejs。下面我们开始安Git，Nodejs，Hexo。</p>
-<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p>可下载<a href="https://sourceforge.net/projects/git-osx-installer/" target="_blank" rel="noopener">安装程序</a></p>
-<h2 id="安装Nodejs"><a href="#安装Nodejs" class="headerlink" title="安装Nodejs"></a>安装Nodejs</h2><p>首先安装nvm</p>
-<p>方法1</p>
-<p>.curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh</a> |bash</p>
-<p>方法2</p>
-<p>.wget -qO- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh</a> |bash</p>
-<p>此时nvm就被安装在/.nvm下</p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>以上所有都安装完成之后再安装Hexo</p>
-<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line">$ sudo npm install hexo-<span class="keyword">cli</span> -g</span><br></pre></td></tr></table></figure>
-
-<h1 id="编写你的博客"><a href="#编写你的博客" class="headerlink" title="编写你的博客"></a>编写你的博客</h1><h2 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h2><p>将下面的username替换成你自己的username，执行成功后，会创建出一个名为username.github.io的文件夹。</p>
-<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo init username.github.io</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>首先我们先切换到刚刚生成的username.github.io目录，安装主题</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> username.github.io</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">$ git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/iissnan/hexo-theme-<span class="keyword">next</span> themes/<span class="keyword">next</span></span><br></pre></td></tr></table></figure>
-
-<p>我这里安装的是Next主题，Next主题是目前最流行的主题，其黑白极简风格我很喜欢</p>
-<h3 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h3><p>打开文件位置username.github.io/_config.yml</p>
-<p>以下有几个键值对必须修改</p>
-<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">title</span>: 星界棱镜的虚境<span class="comment">//你博客的名字</span></span><br><span class="line"><span class="attribute">author</span>: mostlai <span class="comment">//你的名字</span></span><br><span class="line"><span class="attribute">language</span>: zh-Hans <span class="comment">//语言 中文</span></span><br><span class="line"><span class="attribute">theme</span>: next <span class="comment">//刚刚安装的主题名称</span></span><br><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line"> <span class="attribute">type</span>: git <span class="comment">//使用Git 发布</span></span><br><span class="line"> <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/username/username.github.io.git //刚创建的Github仓库</span></span><br></pre></td></tr></table></figure>
-<p>更多配置请看<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">这里</a></p>
-<h3 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h3><p>主题配置文件在username.github.io/themes/next/_config.yml中修改</p>
-<p>帮助请看<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">这里</a></p>
-<h3 id="写下第一篇文章"><a href="#写下第一篇文章" class="headerlink" title="写下第一篇文章"></a>写下第一篇文章</h3><p>在username.github.io/source/_posts下创建你的第一个博客</p>
-<p>打个栗子</p>
-<p>创建一个名为lengjingNB.md的文件，用Markdown进行创作</p>
-<p>这里给一个Markdown语法的<a href="https://www.jianshu.com/p/191d1e21f7ed/" target="_blank" rel="noopener">教程</a></p>
-<h1 id="测试你的博客"><a href="#测试你的博客" class="headerlink" title="测试你的博客"></a>测试你的博客</h1><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo s</span><br></pre></td></tr></table></figure>
-
-<p>测试服务启动，在浏览器中输入localhost:4000即可访问你的博客</p>
-<h1 id="发布你的博客"><a href="#发布你的博客" class="headerlink" title="发布你的博客"></a>发布你的博客</h1><p>安装<a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="noopener">hexo-deployer-git</a>自动部署发布工具</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-
-<p>如果你觉得博客没问题了，你就可以就生成静态网页文件发布至Github pages中</p>
-<figure class="highlight sas"><table><tr><td class="code"><pre><span class="line">$ hexo clean <span class="variable">&amp;&amp;</span> hexo g <span class="variable">&amp;&amp;</span> hexo d</span><br></pre></td></tr></table></figure>
-<p>终端会让你输入Github的用户名和密码，正确输入后，你的博客就可以上传至github了。</p>
-<h1 id="访问你的博客"><a href="#访问你的博客" class="headerlink" title="访问你的博客"></a>访问你的博客</h1><p>在浏览器中输入 <a href="http://username.github.io" target="_blank" rel="noopener">http://username.github.io</a> 就能够访问了</p>
-<h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><p><a href="https://hexo.io/themes/" target="_blank" rel="noopener">更多主题</a></p>
-<p><a href="https://hexo.io/plugins/" target="_blank" rel="noopener">更多配置</a></p>
+<h1 id="浏览需知"><a href="#浏览需知" class="headerlink" title="浏览需知"></a>浏览需知</h1></blockquote>
+<hr>
+<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>  ●为使登陆本网站的各界朋友能正确利用本站资源，星界棱镜子的虚境【下称：本博客】 谨此提醒您：在访问和接受本博客及其旗下各网站、平台、服务前，请您务必事先认真阅读并理解本声明（如果您未满18周岁，您需要在父母或监护人的陪同下阅读本声明）。<br>  ●本站中的文章（包括转帖文章）若作者有版权声明的或文章从其它网站转载而附带有原所有站的版权声明者，其版权归属以附带声明为准；文章仅代表作者本人的观点，与本站立场无关；<br>  ●凡以任何方式登陆本网站或直接、间接使用本网站资料者，视为自愿接受本站声明的约束。<br>  ●对于因不可抗力或不能控制的原因(如战争,自然灾害,核爆炸,各级末日场景,模因危害,现实扭曲,历史重构,认知颠覆,因果重构,维度转变,熵值异常,全面艾莉森·埃尔卡特失效,人类支配地位丧失,时空连续性毁坏等等)造成的网络服务中断或其它缺陷，本站均得免责。<br>  ●任何单位或个人认为本站内容可能涉嫌侵犯其合法权益，应该及时向本站书面反馈，并提供身份证明、权属证明及详细侵权情况证明，本站在收到上述文件并经核实确认后，将会尽快移除相关内容。</p>
+<h1 id="关于评论"><a href="#关于评论" class="headerlink" title="关于评论"></a>关于评论</h1><p>  ●发表评论时不得违反国家的法律法规以及论坛的各项规定。传输和利用信息符合中国法律、国际公约的规定、符合公序良俗,评论者若在发表评论过程中，有触犯国家法律、法规的，一切后果自行负责。<br>  ●禁止滥发链接、暗链、链接群。<br>  ●容许在头像、签名设置一般广告，但禁止在头像、用户名、评论内容、签名、短消息、联系博主等位置进行令人反感的非法广告推广、色情信息传播、过度的SEO推广。<br>  ●禁止一切色情，暴力，赌博，政治敏感，不正当广告。<br>  ●不得利用评论功能发表、传播任何骚扰性的、中伤他人的、辱骂性的、恐吓性的、庸俗淫秽的、公布他人隐私的或其他任何非法及违反网络道德的信息和言论。<br>  ●不得为任何非法目的而使用网络服务系统</p>
+<h1 id="法律责任"><a href="#法律责任" class="headerlink" title="法律责任"></a>法律责任</h1><p>  ●浏览需知为浏览本博客必需阅读且遵守的规则，如任何个体在本博客进行活动，则视为已经阅读并遵守本规则。其在本博客的行为所产生的一切后果自负。<br>  ●如个体拒绝遵守规则，则视为无权访问本博客，本网站使用者因为违反本声明的规定而触犯中华人民共和国法律的，一切后果自己负责，本网站不承担任何责任。<br>  ●本站旨在为广大用户提供更多的信息，其部分服务是无偿的；本站不保证向用户提供的外部链接的准确性和完整性，该外部链接指向的不由本站实际控制的任何网页上的内容，本网站对其合法性亦概不负责，亦不承担任何法律责任，本站内所有内容亦不表明本网站之观点或意见。<br>  ●由于与本网站链接的其它网站所造成之个人资料泄露及由此而导致的任何法律争议和后果，本站均得免责。<br>  ●由于用户将个人密码告知他人或与他人共享注册帐户，由此导致的任何个人资料泄露，本站不负任何责任。<br>  ●当政府司法机关依照法定程序要求本网站披露个人资料时，我们将根据执法单位之要求或为公共安全之目的提供个人资料。在此情况下之任何披露，本站均得免责。</p>
+<h1 id="条款修改"><a href="#条款修改" class="headerlink" title="条款修改"></a>条款修改</h1><p>  ●鉴于网络服务的特殊性，本博客将有权随时修改本声明，一旦本声明的内容发生变动，本博客不再另行通知。<br>  ●本规则一切解释权归博主所有。</p>
 ]]></content>
       <categories>
-        <category>开发日记</category>
-        <category>折腾</category>
+        <category>浏览需知</category>
+        <category>精华</category>
+        <category>置顶</category>
       </categories>
       <tags>
-        <tag>开发日记</tag>
+        <tag>浏览需知</tag>
       </tags>
   </entry>
   <entry>
-    <title>NEW ONE</title>
-    <url>/2020/03/29/NEW-ONE-1/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="初入博客"><a href="#初入博客" class="headerlink" title="初入博客"></a>初入博客</h2><a id="more"></a>
+    <title>两数之和(哈希表)</title>
+    <url>/2021/12/25/twosum/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><p>第一题，两数之和，借此学习哈希表的使用方法</p>
+<a id="more"></a>
 
-<blockquote>
-<p>我已出仓，感觉良好。</p>
+<hr>
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><blockquote>
+<p>给定一个整数数组 <strong>nums</strong> 和一个整数目标值 <strong>target</strong>，请你在该数组中找出 和为目标值 <strong>target</strong>  的那 两个 整数，并返回它们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</p>
+<p>你可以按任意顺序返回答案。</p>
 </blockquote>
-<p> ————————————————————</p>
-<p> 2020.3.29</p>
-<p> 总算是搭建好博客了呢，开心！</p>
-<p><img src="https://s3.ax1x.com/2021/01/23/s7iCUP.png" alt="示例"></p>
-<p>——————————————————————</p>
-]]></content>
+<blockquote>
+<p>来源：<strong>LeetCode</strong></p>
+</blockquote>
+<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><h2 id="暴力解法-C-C"><a href="#暴力解法-C-C" class="headerlink" title="暴力解法(C++/C)"></a>暴力解法(C++/C)</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">direct</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>() - <span class="number">1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = i + <span class="number">1</span>; j &lt; nums.<span class="built_in">size</span>(); j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] + nums[j] == target)</span><br><span class="line">            &#123;</span><br><span class="line">				<span class="keyword">return</span> &#123;i,j&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> &#123;i,j&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>解析:嵌套遍历，时间复杂度为 $O(n^2)$ </p>
+<h2 id="哈希表-C-C"><a href="#哈希表-C-C" class="headerlink" title="哈希表(C++/C)"></a>哈希表(C++/C)</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">hashmap</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; a;  <span class="comment">//建立hash表存放数组元素</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">        a.insert(<span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;::value_type(nums[i], i));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (a.count(target - nums[i]) &gt; <span class="number">0</span> &amp;&amp; (a[target - nums[i]] != i)) &#123;  <span class="comment">//判断能否找到并且不是自己本身</span></span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; a[target - nums[i]] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>时间复杂度为 $O(n)$</p>
+<h1 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><blockquote>
+<p><a href="https://baike.baidu.com/item/散列表/10027933" target="_blank" rel="noopener">散列表</a>（Hash table，也叫哈希表），是根据关键码值(Key value)而直接进行访问的<a href="https://baike.baidu.com/item/数据结构/1450" target="_blank" rel="noopener">数据结构</a>。也就是说，它通过把关键码值映射到表中一个位置来访问记录，以加快查找的速度。这个映射函数叫做<a href="https://baike.baidu.com/item/散列函数/2366288" target="_blank" rel="noopener">散列函数</a>，存放记录的<a href="https://baike.baidu.com/item/数组/3794097" target="_blank" rel="noopener">数组</a>叫做<a href="https://baike.baidu.com/item/散列表/10027933" target="_blank" rel="noopener">散列表</a>。</p>
+<p>给定表M，存在函数f(key)，对任意给定的关键字值key，代入函数后若能得到包含该关键字的记录在表中的地址，则称表M为哈希(Hash）表，函数f(key)为哈希(Hash) 函数。</p>
+</blockquote>
+<p>摘自<a href="https://baike.baidu.com/item/%E5%93%88%E5%B8%8C%E8%A1%A8/5981869?fr=aladdin" target="_blank" rel="noopener">百度百科</a></p>
+<h2 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h2><p>从一组数据中查询特定的值，按最原始的方法去遍历搜索无疑是最慢的，如果该值处于最后一位，时间花费就会很大。但是我们可以发现这些值之间会存在某种特点的关系，我们可以按照这些关系进行排序，比如说人名，我们可以按照姓名的首字母来排序，这样搜索起来，通过索引下标，我们就可以快速找到需要的数值。这就是通过一些特定的方法去得到一个特定的值，类似于映射函数，这里叫做哈希函数（hash function）</p>
+<p>但是，这种方式有时会导致多个值(value)有了相同的hash值，这就是哈希冲突或者哈希碰撞</p>
+<p>为了解决碰撞，实现哈希表可以有以下两种方式：</p>
+<ul>
+<li>数组 + 链表</li>
+<li>数组 + 二叉树</li>
+</ul>
+<h1 id="哈希冲突"><a href="#哈希冲突" class="headerlink" title="哈希冲突"></a>哈希冲突</h1>]]></content>
       <categories>
-        <category>随笔</category>
-        <category>最初之作</category>
+        <category>算法</category>
       </categories>
       <tags>
-        <tag>摸鱼</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CDDA大灾变MOD教程1期(基础知识)</title>
-    <url>/2020/08/26/cdda1/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote>
-<h1 id="生成你的mod文件夹"><a href="#生成你的mod文件夹" class="headerlink" title="生成你的mod文件夹"></a>生成你的mod文件夹</h1></blockquote>
-<hr>
-<h1 id="创建一个文件夹"><a href="#创建一个文件夹" class="headerlink" title="创建一个文件夹"></a>创建一个文件夹</h1><a id="more"></a>
-
-<p>  打开游戏目录，找到\data\mods，这里便是CDDA游戏中所有mod的存放位置。既然要做自己的mod，那么自己就在这个目录下生成一个文件夹吧。</p>
-<p>  比如新建一个名为moyu的文件夹。</p>
-<p>  可是现在只是一个普普通通的文件夹，里面空无一物，这就需要我们在里面新建一个我称之为Mod配置信息的json文件。好，我们新建一个名为modinfo.json的文件。</p>
-<p>  接下来就是写下你的mod信息了，这是你伟大计划的第一步，激不激动？</p>
-<p>  关于编辑json文件呢，可以用记事本编辑，看起来不大舒服就是，这里我推荐notepad++来编辑json文件。</p>
-<p>  好的，进入modinfo.json文件，这里还是一片空白，别慌，这是有格式的，把格式复制上去，再进行自我创作就可以了。</p>
-<p>  代码放上</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">[</span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">"type"</span>: <span class="string">"MOD_INFO"</span>,</span><br><span class="line">  <span class="attr">"ident"</span>: <span class="string">"MOYU"</span>,  <span class="comment">//你的mod标识</span></span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"摸鱼"</span>,  <span class="comment">//在游戏中你的mod名字</span></span><br><span class="line">  <span class="attr">"authors"</span>: [ <span class="string">"星界棱镜子"</span> ],  <span class="comment">//作者</span></span><br><span class="line">  <span class="attr">"maintainers"</span>: [ <span class="string">"星界棱镜子"</span> ],  <span class="comment">//维护人员</span></span><br><span class="line">  <span class="attr">"description"</span>: <span class="string">"天天摸鱼身体棒"</span>,  <span class="comment">//介绍</span></span><br><span class="line">  <span class="attr">"category"</span>: <span class="string">"other"</span>,  <span class="comment">//mod分类，分类有很多种，大家可以去官网搜索，我就不一一赘述了</span></span><br><span class="line">  <span class="attr">"dependencies"</span>: [ <span class="string">"dda"</span> ],  <span class="comment">//依赖项，也称之为前置mod</span></span><br><span class="line">  <span class="attr">"obsolete"</span>: <span class="literal">false</span>  <span class="comment">//是否禁用</span></span><br><span class="line">&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-<p>  好的，打开游戏看看，在mod栏的最下方，一个名叫摸鱼的mod已经出现，不过它现在还没有一点内容…</p>
-<p>#添加一个物品</p>
-<p>  内容空空怎么行，我们马上为游戏添加一个自己想要的物品。</p>
-<p>  在添加物品前，我们先规划一下，我们要添加什么物品，这个物品有什么用等等问题。当然了，我这个摸鱼mod当然不需要什么实用性，我们来添加一个叫【盒里】的物品。</p>
-<p>  还是老规矩，找到模板，我们可以把目标投向石头。</p>
-<p>  我们找到石头的代码。这里我们可以借助工具<strong><em><a href="https://cdda-trunk.aloxaf.cn/" target="_blank" rel="noopener">CDDA物品浏览器</a></em></strong>这个浏览器可以浏览CDDA中各个物品的信息，也可以查看物品的json信息，不过可不能直接复制下来，浏览器的json信息跟游戏的json信息还是有点出入的。</p>
-<p>  我们搜索石头，通过点击下方的 查看 JSON可以看见(节选部分)</p>
-  <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="string">"type"</span>: <span class="string">"AMMO"</span>, <span class="regexp">//</span>类型</span><br><span class="line"><span class="string">"id"</span>: <span class="string">"rock"</span>,  <span class="regexp">//</span>物品id</span><br><span class="line"><span class="string">"symbol"</span>: <span class="string">"*"</span>,  <span class="regexp">//</span>物品外观</span><br><span class="line"><span class="string">"color"</span>: <span class="string">"light_gray"</span>,  <span class="regexp">//</span>颜色</span><br><span class="line"><span class="string">"name"</span>: &#123; <span class="string">"str"</span>: <span class="string">"石头"</span>&#125;,  <span class="regexp">//</span>名字，可以改成<span class="string">"name"</span>: &#123; <span class="string">"str"</span>: <span class="string">"石头"</span>, <span class="string">"str_pl"</span>: <span class="string">"一坨石头"</span>&#125;,str_pl就是复数时的名字</span><br></pre></td></tr></table></figure>
-
-<p>  好，现在我们知道了石头的id是rock，那么该怎么获取其代码呢，我推荐使用notepad++的文件搜索功能，按住ctrl+F呼出搜索菜单，选中文件搜索选卡，在查找目标中填入rock，目录选中你的游戏文件的\data\json\items文件夹，如何进行文件搜索，很快就可以找到石头在什么位置。</p>
-<p>  经过几秒的搜索，我们发现石头位于\data\json\items\ammo.json文件内，打开文件，找到id为rock的物品，获取其代码。</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"type"</span>: <span class="string">"AMMO"</span>,  <span class="comment">//类型，这里的AMMO指的是弹药</span></span><br><span class="line">  <span class="attr">"id"</span>: <span class="string">"rock"</span>,  <span class="comment">//物品id</span></span><br><span class="line">  <span class="attr">"symbol"</span>: <span class="string">"*"</span>,  <span class="comment">//物品外观</span></span><br><span class="line">  <span class="attr">"color"</span>: <span class="string">"light_gray"</span>,  <span class="comment">//颜色</span></span><br><span class="line">  <span class="attr">"name"</span>: &#123; <span class="attr">"str"</span>: <span class="string">"rock"</span> &#125;,  <span class="comment">//名字</span></span><br><span class="line">  <span class="attr">"description"</span>: <span class="string">"A rock the size of a baseball.  Makes a decent melee weapon, and is also good for throwing at enemies."</span>,  <span class="comment">//描述</span></span><br><span class="line">  <span class="attr">"category"</span>: <span class="string">"spare_parts"</span>,  <span class="comment">//分类</span></span><br><span class="line">  <span class="attr">"material"</span>: <span class="string">"stone"</span>,  <span class="comment">//材质</span></span><br><span class="line">  <span class="attr">"ammo_type"</span>: <span class="string">"rock"</span>,  <span class="comment">//弹药类型</span></span><br><span class="line">  <span class="attr">"flags"</span>: [ <span class="string">"TRADER_AVOID"</span> ],  <span class="comment">//flag属性</span></span><br><span class="line">  <span class="attr">"weight"</span>: <span class="string">"657 g"</span>,  <span class="comment">//重量</span></span><br><span class="line">  <span class="attr">"volume"</span>: <span class="string">"250 ml"</span>,  <span class="comment">//体积</span></span><br><span class="line">  <span class="attr">"bashing"</span>: <span class="number">7</span>,  <span class="comment">//炖鸡（不是）钝击</span></span><br><span class="line">  <span class="attr">"damage"</span>: <span class="number">7</span>, <span class="comment">//伤害</span></span><br><span class="line">  <span class="attr">"range"</span>: <span class="number">10</span>,  <span class="comment">//射程</span></span><br><span class="line">  <span class="attr">"dispersion"</span>: <span class="number">14</span>, <span class="comment">//散射</span></span><br><span class="line">  <span class="attr">"loudness"</span>: <span class="number">0</span>,  <span class="comment">//产生噪音</span></span><br><span class="line">  <span class="attr">"to_hit"</span>: <span class="number">-2</span>,  <span class="comment">//手持时击打伤害</span></span><br><span class="line">  <span class="attr">"effects"</span>: [ <span class="string">"NEVER_MISFIRES"</span>, <span class="string">"NON-FOULING"</span>, <span class="string">"RECOVER_80"</span> ],  <span class="comment">//子弹效果</span></span><br><span class="line">  <span class="attr">"qualities"</span>: [ [ <span class="string">"HAMMER"</span>, <span class="number">1</span> ] ]  <span class="comment">//物品工具属性</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>好的，我们如法炮制，在自己的mod文件夹中新建一个items.json文件，将石头的代码复制进来,对代码进行DIY一下，变成了这个样子</p>
-<div class="note warning"><h1 id="警告"><a href="#警告" class="headerlink" title="警告"></a>警告</h1><p>json文件的起始和末尾要分别加上[和]，否则游戏会报错。</p></div>
-
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">[</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">"type"</span>: <span class="string">"AMMO"</span>,</span><br><span class="line">    <span class="attr">"id"</span>: <span class="string">"zhehelima"</span>,</span><br><span class="line">    <span class="attr">"symbol"</span>: <span class="string">"*"</span>,</span><br><span class="line">    <span class="attr">"color"</span>: <span class="string">"light_gray"</span>,</span><br><span class="line">    <span class="attr">"name"</span>: &#123; <span class="attr">"str"</span>: <span class="string">"盒里"</span> &#125;,</span><br><span class="line">    <span class="attr">"description"</span>: <span class="string">"这合理吗"</span>,</span><br><span class="line">    <span class="attr">"category"</span>: <span class="string">"spare_parts"</span>,</span><br><span class="line">    <span class="attr">"material"</span>: <span class="string">"stone"</span>,</span><br><span class="line">    <span class="attr">"ammo_type"</span>: <span class="string">"rock"</span>,</span><br><span class="line">    <span class="attr">"flags"</span>: [ <span class="string">"TRADER_AVOID"</span> ],</span><br><span class="line">    <span class="attr">"weight"</span>: <span class="string">"1 g"</span>,</span><br><span class="line">    <span class="attr">"volume"</span>: <span class="string">"1 ml"</span>,</span><br><span class="line">    <span class="attr">"bashing"</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">"damage"</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">"range"</span>: <span class="number">10</span>,</span><br><span class="line">    <span class="attr">"dispersion"</span>: <span class="number">14</span>,</span><br><span class="line">    <span class="attr">"loudness"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="attr">"to_hit"</span>: <span class="number">-2</span>,</span><br><span class="line">    <span class="attr">"effects"</span>: [ <span class="string">"NEVER_MISFIRES"</span>, <span class="string">"NON-FOULING"</span>, <span class="string">"RECOVER_80"</span> ],</span><br><span class="line">    <span class="attr">"qualities"</span>: [ [ <span class="string">"HAMMER"</span>, <span class="number">1</span> ] ]</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-
-<div class="note warning"><h1 id="警告"><a href="#警告" class="headerlink" title="警告"></a>警告</h1><p>注意上方的[和]</p></div>
-
-<p>好的，这样一个盒里就添加完毕了。这个盒里拥有一级捶打属性…</p>
-<p>你可能不太满意，这样子的物品毫无作用，当然，你可以添加枪械，药品，机器人，无人机等等乱七八糟的，但饭要一口口吃，先做个简单的练练手嘛。</p>
-<p>OK，本期就教大家如何建立一个mod并添加一件物品，下一期我会教大家如何自制一把武器。拜拜啦owo</p>
-]]></content>
-      <categories>
-        <category>CDDA大灾变</category>
-      </categories>
-      <tags>
-        <tag>CDDA大灾变</tag>
-        <tag>精华</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于Next主题中分类/标签等页面404的解决办法</title>
-    <url>/2020/03/30/Next-404/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote>
-<h1 id="闲话"><a href="#闲话" class="headerlink" title="闲话"></a>闲话</h1></blockquote>
-<p>  最近在搞博客，Next主题踩了不少坑，这个404问题就困扰了我很久，研究了一会儿终于找到了办法。</p>
-<hr>
-<a id="more"></a>
-
-<h1 id="症状"><a href="#症状" class="headerlink" title="症状"></a>症状</h1><p>主要表现为网页链接后多出<strong>%20</strong></p>
-<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>打开<strong>username.github.io\themes\next_config.yml</strong></p>
-<p>找到以下代码</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line"><span class="symbol">  home:</span> / || home</span><br><span class="line"><span class="symbol">  about:</span> <span class="meta-keyword">/about/</span> || user</span><br><span class="line"><span class="symbol">  tags:</span> <span class="meta-keyword">/tags/</span> || tags</span><br><span class="line"><span class="symbol">  categories:</span> <span class="meta-keyword">/categories/</span> || th</span><br><span class="line"><span class="symbol">  archives:</span> <span class="meta-keyword">/archives/</span> || archive</span><br><span class="line"><span class="symbol">  schedule:</span> <span class="meta-keyword">/schedule/</span> || calendar</span><br><span class="line"><span class="symbol">  sitemap:</span> /sitemap.xml || sitemap</span><br><span class="line"><span class="symbol">  commonweal:</span> /<span class="number">404</span>/ || heartbeat</span><br></pre></td></tr></table></figure>
-
-<p>明显发现每个||前都带有<strong>空格</strong>，这个<strong>空格</strong>就是罪魁祸首啦。</p>
-<p>删除每个||前的<strong>空格</strong>，改为以下代码</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line"><span class="symbol">  home:</span> /|| home</span><br><span class="line"><span class="symbol">  about:</span> <span class="meta-keyword">/about/</span>|| user</span><br><span class="line"><span class="symbol">  tags:</span> <span class="meta-keyword">/tags/</span>|| tags</span><br><span class="line"><span class="symbol">  categories:</span> <span class="meta-keyword">/categories/</span>|| th</span><br><span class="line"><span class="symbol">  archives:</span> <span class="meta-keyword">/archives/</span>|| archive</span><br><span class="line"><span class="symbol">  schedule:</span> <span class="meta-keyword">/schedule/</span>|| calendar</span><br><span class="line"><span class="symbol">  sitemap:</span> /sitemap.xml|| sitemap</span><br><span class="line"><span class="symbol">  commonweal:</span> /<span class="number">404</span>/|| heartbeat</span><br></pre></td></tr></table></figure>
-
-<p>重新部署发布，解决问题。</p>
-]]></content>
-      <categories>
-        <category>开发日记</category>
-        <category>折腾</category>
-      </categories>
-      <tags>
-        <tag>开发日记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CDDA大灾变MOD教程2期(制作武器)</title>
-    <url>/2020/09/01/cdda2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote>
-<h1 id="前面"><a href="#前面" class="headerlink" title="前面"></a>前面</h1></blockquote>
-<hr>
-<p>  群里的大佬说先写武器会比较好，所以我就把武器的教程先放出来。</p>
-<a id="more"></a>
-
-<h1 id="武器的种类"><a href="#武器的种类" class="headerlink" title="武器的种类"></a>武器的种类</h1><p>  在CDDA里，武器的种类有远程武器，近战武器和投掷武器，我会一一给大家介绍。</p>
-<h1 id="近战武器"><a href="#近战武器" class="headerlink" title="近战武器"></a>近战武器</h1><p>  近战武器有刀剑棍棒什么的，当然这种属性没有在json里面体现，主要还是靠描述(“description”)来区分。</p>
-<p>  近战武器的json文件在游戏的\data\json\items\melee目录下，大家可以先看看。</p>
-<p>  要做一把自己的武器，首先可以参考一个模板，我拿出一个模板在这里给大家参考一下。</p>
-  <figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"type"</span>: <span class="string">"GENERIC"</span>, <span class="comment">//类别</span></span><br><span class="line">  <span class="attr">"id"</span>: <span class="string">"sword_wood"</span>,  <span class="comment">//id</span></span><br><span class="line">  <span class="attr">"symbol"</span>: <span class="string">"!"</span>,  <span class="comment">//标识</span></span><br><span class="line">  <span class="attr">"color"</span>: <span class="string">"brown"</span>,  <span class="comment">//颜色</span></span><br><span class="line">  <span class="attr">"name"</span>: &#123; <span class="attr">"str"</span>: <span class="string">"2-by-sword"</span> &#125;,  <span class="comment">//名字</span></span><br><span class="line">  <span class="attr">"description"</span>: <span class="string">"A two by four with a cross guard and whittled down point; not much for slashing, but much better than your bare hands."</span>,  <span class="comment">//描述</span></span><br><span class="line">  <span class="attr">"material"</span>: <span class="string">"wood"</span>,  <span class="comment">//材质</span></span><br><span class="line">  <span class="attr">"volume"</span>: <span class="string">"1250 ml"</span>,  <span class="comment">//体积</span></span><br><span class="line">  <span class="attr">"weight"</span>: <span class="string">"600 g"</span>, <span class="comment">//重量</span></span><br><span class="line">  <span class="attr">"bashing"</span>: <span class="number">12</span>,  <span class="comment">//钝击</span></span><br><span class="line">  <span class="attr">"cutting"</span>: <span class="number">1</span>,  <span class="comment">//斩击</span></span><br><span class="line">  <span class="attr">"to_hit"</span>: <span class="number">1</span>,  <span class="comment">//打击</span></span><br><span class="line">  <span class="attr">"flags"</span>: [ <span class="string">"SHEATH_SWORD"</span> ],  <span class="comment">//flag属性</span></span><br><span class="line">  <span class="attr">"techniques"</span>: [ <span class="string">"WBLOCK_1"</span> ]  <span class="comment">//携带的工具属性</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>  当然，还有其他的参数</p>
-  <figure class="highlight"><table><tr><td class="code"><pre><span class="line">"magazines": [</span><br><span class="line">    [</span><br><span class="line">      <span class="string">"battery"</span>,  <span class="comment">//弹药类型</span></span><br><span class="line">      [ <span class="string">"medium_battery_cell"</span>, <span class="string">"medium_plus_battery_cell"</span>, <span class="string">"medium_atomic_battery_cell"</span>, <span class="string">"medium_disposable_cell"</span> ]  <span class="comment">//弹药</span></span><br><span class="line">    ]</span><br><span class="line">  ],</span><br><span class="line">  "magazine_well": 2</span><br></pre></td></tr></table></figure>
-
-<p>  比如这个，当有这个参数时该武器激活时会消耗内部容器（magazines）中的“弹药”值，比如电棍激活后就会消耗内部的电池</p>
-  <figure class="highlight"><table><tr><td class="code"><pre><span class="line">"gunmod_data": &#123;</span><br><span class="line">    "location": "underbarrel",  //安装部位</span><br><span class="line">    "mod_targets": [ "smg", "rifle", "shotgun", "launcher", "crossbow" ],  //能安装到什么枪械上</span><br><span class="line">    "mode_modifier": [ [ "REACH", "bayonet", 2, [ "MELEE", "REACH_ATTACK" ] ] ]  //格斗技</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
-
-<p>  以及这个，当有这个参数时，该武器可以安装在枪械上，比如刺刀什么的</p>
-]]></content>
-      <categories>
-        <category>CDDA大灾变</category>
-      </categories>
-      <tags>
-        <tag>CDDA大灾变</tag>
-        <tag>精华</tag>
+        <tag>算法</tag>
+        <tag>哈希表</tag>
       </tags>
   </entry>
   <entry>
@@ -356,6 +223,83 @@
       </tags>
   </entry>
   <entry>
+    <title>CDDA大灾变MOD教程2期(制作武器)</title>
+    <url>/2020/09/01/cdda2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote>
+<h1 id="前面"><a href="#前面" class="headerlink" title="前面"></a>前面</h1></blockquote>
+<hr>
+<p>  群里的大佬说先写武器会比较好，所以我就把武器的教程先放出来。</p>
+<a id="more"></a>
+
+<h1 id="武器的种类"><a href="#武器的种类" class="headerlink" title="武器的种类"></a>武器的种类</h1><p>  在CDDA里，武器的种类有远程武器，近战武器和投掷武器，我会一一给大家介绍。</p>
+<h1 id="近战武器"><a href="#近战武器" class="headerlink" title="近战武器"></a>近战武器</h1><p>  近战武器有刀剑棍棒什么的，当然这种属性没有在json里面体现，主要还是靠描述(“description”)来区分。</p>
+<p>  近战武器的json文件在游戏的\data\json\items\melee目录下，大家可以先看看。</p>
+<p>  要做一把自己的武器，首先可以参考一个模板，我拿出一个模板在这里给大家参考一下。</p>
+  <figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"type"</span>: <span class="string">"GENERIC"</span>, <span class="comment">//类别</span></span><br><span class="line">  <span class="attr">"id"</span>: <span class="string">"sword_wood"</span>,  <span class="comment">//id</span></span><br><span class="line">  <span class="attr">"symbol"</span>: <span class="string">"!"</span>,  <span class="comment">//标识</span></span><br><span class="line">  <span class="attr">"color"</span>: <span class="string">"brown"</span>,  <span class="comment">//颜色</span></span><br><span class="line">  <span class="attr">"name"</span>: &#123; <span class="attr">"str"</span>: <span class="string">"2-by-sword"</span> &#125;,  <span class="comment">//名字</span></span><br><span class="line">  <span class="attr">"description"</span>: <span class="string">"A two by four with a cross guard and whittled down point; not much for slashing, but much better than your bare hands."</span>,  <span class="comment">//描述</span></span><br><span class="line">  <span class="attr">"material"</span>: <span class="string">"wood"</span>,  <span class="comment">//材质</span></span><br><span class="line">  <span class="attr">"volume"</span>: <span class="string">"1250 ml"</span>,  <span class="comment">//体积</span></span><br><span class="line">  <span class="attr">"weight"</span>: <span class="string">"600 g"</span>, <span class="comment">//重量</span></span><br><span class="line">  <span class="attr">"bashing"</span>: <span class="number">12</span>,  <span class="comment">//钝击</span></span><br><span class="line">  <span class="attr">"cutting"</span>: <span class="number">1</span>,  <span class="comment">//斩击</span></span><br><span class="line">  <span class="attr">"to_hit"</span>: <span class="number">1</span>,  <span class="comment">//打击</span></span><br><span class="line">  <span class="attr">"flags"</span>: [ <span class="string">"SHEATH_SWORD"</span> ],  <span class="comment">//flag属性</span></span><br><span class="line">  <span class="attr">"techniques"</span>: [ <span class="string">"WBLOCK_1"</span> ]  <span class="comment">//携带的工具属性</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>  当然，还有其他的参数</p>
+  <figure class="highlight"><table><tr><td class="code"><pre><span class="line">"magazines": [</span><br><span class="line">    [</span><br><span class="line">      <span class="string">"battery"</span>,  <span class="comment">//弹药类型</span></span><br><span class="line">      [ <span class="string">"medium_battery_cell"</span>, <span class="string">"medium_plus_battery_cell"</span>, <span class="string">"medium_atomic_battery_cell"</span>, <span class="string">"medium_disposable_cell"</span> ]  <span class="comment">//弹药</span></span><br><span class="line">    ]</span><br><span class="line">  ],</span><br><span class="line">  "magazine_well": 2</span><br></pre></td></tr></table></figure>
+
+<p>  比如这个，当有这个参数时该武器激活时会消耗内部容器（magazines）中的“弹药”值，比如电棍激活后就会消耗内部的电池</p>
+  <figure class="highlight"><table><tr><td class="code"><pre><span class="line">"gunmod_data": &#123;</span><br><span class="line">    "location": "underbarrel",  //安装部位</span><br><span class="line">    "mod_targets": [ "smg", "rifle", "shotgun", "launcher", "crossbow" ],  //能安装到什么枪械上</span><br><span class="line">    "mode_modifier": [ [ "REACH", "bayonet", 2, [ "MELEE", "REACH_ATTACK" ] ] ]  //格斗技</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>  以及这个，当有这个参数时，该武器可以安装在枪械上，比如刺刀什么的</p>
+]]></content>
+      <categories>
+        <category>CDDA大灾变</category>
+      </categories>
+      <tags>
+        <tag>CDDA大灾变</tag>
+        <tag>精华</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CDDA大灾变MOD教程1期(基础知识)</title>
+    <url>/2020/08/26/cdda1/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote>
+<h1 id="生成你的mod文件夹"><a href="#生成你的mod文件夹" class="headerlink" title="生成你的mod文件夹"></a>生成你的mod文件夹</h1></blockquote>
+<hr>
+<h1 id="创建一个文件夹"><a href="#创建一个文件夹" class="headerlink" title="创建一个文件夹"></a>创建一个文件夹</h1><a id="more"></a>
+
+<p>  打开游戏目录，找到\data\mods，这里便是CDDA游戏中所有mod的存放位置。既然要做自己的mod，那么自己就在这个目录下生成一个文件夹吧。</p>
+<p>  比如新建一个名为moyu的文件夹。</p>
+<p>  可是现在只是一个普普通通的文件夹，里面空无一物，这就需要我们在里面新建一个我称之为Mod配置信息的json文件。好，我们新建一个名为modinfo.json的文件。</p>
+<p>  接下来就是写下你的mod信息了，这是你伟大计划的第一步，激不激动？</p>
+<p>  关于编辑json文件呢，可以用记事本编辑，看起来不大舒服就是，这里我推荐notepad++来编辑json文件。</p>
+<p>  好的，进入modinfo.json文件，这里还是一片空白，别慌，这是有格式的，把格式复制上去，再进行自我创作就可以了。</p>
+<p>  代码放上</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">[</span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">"type"</span>: <span class="string">"MOD_INFO"</span>,</span><br><span class="line">  <span class="attr">"ident"</span>: <span class="string">"MOYU"</span>,  <span class="comment">//你的mod标识</span></span><br><span class="line">  <span class="attr">"name"</span>: <span class="string">"摸鱼"</span>,  <span class="comment">//在游戏中你的mod名字</span></span><br><span class="line">  <span class="attr">"authors"</span>: [ <span class="string">"星界棱镜子"</span> ],  <span class="comment">//作者</span></span><br><span class="line">  <span class="attr">"maintainers"</span>: [ <span class="string">"星界棱镜子"</span> ],  <span class="comment">//维护人员</span></span><br><span class="line">  <span class="attr">"description"</span>: <span class="string">"天天摸鱼身体棒"</span>,  <span class="comment">//介绍</span></span><br><span class="line">  <span class="attr">"category"</span>: <span class="string">"other"</span>,  <span class="comment">//mod分类，分类有很多种，大家可以去官网搜索，我就不一一赘述了</span></span><br><span class="line">  <span class="attr">"dependencies"</span>: [ <span class="string">"dda"</span> ],  <span class="comment">//依赖项，也称之为前置mod</span></span><br><span class="line">  <span class="attr">"obsolete"</span>: <span class="literal">false</span>  <span class="comment">//是否禁用</span></span><br><span class="line">&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>  好的，打开游戏看看，在mod栏的最下方，一个名叫摸鱼的mod已经出现，不过它现在还没有一点内容…</p>
+<p>#添加一个物品</p>
+<p>  内容空空怎么行，我们马上为游戏添加一个自己想要的物品。</p>
+<p>  在添加物品前，我们先规划一下，我们要添加什么物品，这个物品有什么用等等问题。当然了，我这个摸鱼mod当然不需要什么实用性，我们来添加一个叫【盒里】的物品。</p>
+<p>  还是老规矩，找到模板，我们可以把目标投向石头。</p>
+<p>  我们找到石头的代码。这里我们可以借助工具<strong><em><a href="https://cdda-trunk.aloxaf.cn/" target="_blank" rel="noopener">CDDA物品浏览器</a></em></strong>这个浏览器可以浏览CDDA中各个物品的信息，也可以查看物品的json信息，不过可不能直接复制下来，浏览器的json信息跟游戏的json信息还是有点出入的。</p>
+<p>  我们搜索石头，通过点击下方的 查看 JSON可以看见(节选部分)</p>
+  <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="string">"type"</span>: <span class="string">"AMMO"</span>, <span class="regexp">//</span>类型</span><br><span class="line"><span class="string">"id"</span>: <span class="string">"rock"</span>,  <span class="regexp">//</span>物品id</span><br><span class="line"><span class="string">"symbol"</span>: <span class="string">"*"</span>,  <span class="regexp">//</span>物品外观</span><br><span class="line"><span class="string">"color"</span>: <span class="string">"light_gray"</span>,  <span class="regexp">//</span>颜色</span><br><span class="line"><span class="string">"name"</span>: &#123; <span class="string">"str"</span>: <span class="string">"石头"</span>&#125;,  <span class="regexp">//</span>名字，可以改成<span class="string">"name"</span>: &#123; <span class="string">"str"</span>: <span class="string">"石头"</span>, <span class="string">"str_pl"</span>: <span class="string">"一坨石头"</span>&#125;,str_pl就是复数时的名字</span><br></pre></td></tr></table></figure>
+
+<p>  好，现在我们知道了石头的id是rock，那么该怎么获取其代码呢，我推荐使用notepad++的文件搜索功能，按住ctrl+F呼出搜索菜单，选中文件搜索选卡，在查找目标中填入rock，目录选中你的游戏文件的\data\json\items文件夹，如何进行文件搜索，很快就可以找到石头在什么位置。</p>
+<p>  经过几秒的搜索，我们发现石头位于\data\json\items\ammo.json文件内，打开文件，找到id为rock的物品，获取其代码。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"type"</span>: <span class="string">"AMMO"</span>,  <span class="comment">//类型，这里的AMMO指的是弹药</span></span><br><span class="line">  <span class="attr">"id"</span>: <span class="string">"rock"</span>,  <span class="comment">//物品id</span></span><br><span class="line">  <span class="attr">"symbol"</span>: <span class="string">"*"</span>,  <span class="comment">//物品外观</span></span><br><span class="line">  <span class="attr">"color"</span>: <span class="string">"light_gray"</span>,  <span class="comment">//颜色</span></span><br><span class="line">  <span class="attr">"name"</span>: &#123; <span class="attr">"str"</span>: <span class="string">"rock"</span> &#125;,  <span class="comment">//名字</span></span><br><span class="line">  <span class="attr">"description"</span>: <span class="string">"A rock the size of a baseball.  Makes a decent melee weapon, and is also good for throwing at enemies."</span>,  <span class="comment">//描述</span></span><br><span class="line">  <span class="attr">"category"</span>: <span class="string">"spare_parts"</span>,  <span class="comment">//分类</span></span><br><span class="line">  <span class="attr">"material"</span>: <span class="string">"stone"</span>,  <span class="comment">//材质</span></span><br><span class="line">  <span class="attr">"ammo_type"</span>: <span class="string">"rock"</span>,  <span class="comment">//弹药类型</span></span><br><span class="line">  <span class="attr">"flags"</span>: [ <span class="string">"TRADER_AVOID"</span> ],  <span class="comment">//flag属性</span></span><br><span class="line">  <span class="attr">"weight"</span>: <span class="string">"657 g"</span>,  <span class="comment">//重量</span></span><br><span class="line">  <span class="attr">"volume"</span>: <span class="string">"250 ml"</span>,  <span class="comment">//体积</span></span><br><span class="line">  <span class="attr">"bashing"</span>: <span class="number">7</span>,  <span class="comment">//炖鸡（不是）钝击</span></span><br><span class="line">  <span class="attr">"damage"</span>: <span class="number">7</span>, <span class="comment">//伤害</span></span><br><span class="line">  <span class="attr">"range"</span>: <span class="number">10</span>,  <span class="comment">//射程</span></span><br><span class="line">  <span class="attr">"dispersion"</span>: <span class="number">14</span>, <span class="comment">//散射</span></span><br><span class="line">  <span class="attr">"loudness"</span>: <span class="number">0</span>,  <span class="comment">//产生噪音</span></span><br><span class="line">  <span class="attr">"to_hit"</span>: <span class="number">-2</span>,  <span class="comment">//手持时击打伤害</span></span><br><span class="line">  <span class="attr">"effects"</span>: [ <span class="string">"NEVER_MISFIRES"</span>, <span class="string">"NON-FOULING"</span>, <span class="string">"RECOVER_80"</span> ],  <span class="comment">//子弹效果</span></span><br><span class="line">  <span class="attr">"qualities"</span>: [ [ <span class="string">"HAMMER"</span>, <span class="number">1</span> ] ]  <span class="comment">//物品工具属性</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>好的，我们如法炮制，在自己的mod文件夹中新建一个items.json文件，将石头的代码复制进来,对代码进行DIY一下，变成了这个样子</p>
+<div class="note warning"><h1 id="警告"><a href="#警告" class="headerlink" title="警告"></a>警告</h1><p>json文件的起始和末尾要分别加上[和]，否则游戏会报错。</p></div>
+
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">[</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">"type"</span>: <span class="string">"AMMO"</span>,</span><br><span class="line">    <span class="attr">"id"</span>: <span class="string">"zhehelima"</span>,</span><br><span class="line">    <span class="attr">"symbol"</span>: <span class="string">"*"</span>,</span><br><span class="line">    <span class="attr">"color"</span>: <span class="string">"light_gray"</span>,</span><br><span class="line">    <span class="attr">"name"</span>: &#123; <span class="attr">"str"</span>: <span class="string">"盒里"</span> &#125;,</span><br><span class="line">    <span class="attr">"description"</span>: <span class="string">"这合理吗"</span>,</span><br><span class="line">    <span class="attr">"category"</span>: <span class="string">"spare_parts"</span>,</span><br><span class="line">    <span class="attr">"material"</span>: <span class="string">"stone"</span>,</span><br><span class="line">    <span class="attr">"ammo_type"</span>: <span class="string">"rock"</span>,</span><br><span class="line">    <span class="attr">"flags"</span>: [ <span class="string">"TRADER_AVOID"</span> ],</span><br><span class="line">    <span class="attr">"weight"</span>: <span class="string">"1 g"</span>,</span><br><span class="line">    <span class="attr">"volume"</span>: <span class="string">"1 ml"</span>,</span><br><span class="line">    <span class="attr">"bashing"</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">"damage"</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">"range"</span>: <span class="number">10</span>,</span><br><span class="line">    <span class="attr">"dispersion"</span>: <span class="number">14</span>,</span><br><span class="line">    <span class="attr">"loudness"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="attr">"to_hit"</span>: <span class="number">-2</span>,</span><br><span class="line">    <span class="attr">"effects"</span>: [ <span class="string">"NEVER_MISFIRES"</span>, <span class="string">"NON-FOULING"</span>, <span class="string">"RECOVER_80"</span> ],</span><br><span class="line">    <span class="attr">"qualities"</span>: [ [ <span class="string">"HAMMER"</span>, <span class="number">1</span> ] ]</span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<div class="note warning"><h1 id="警告"><a href="#警告" class="headerlink" title="警告"></a>警告</h1><p>注意上方的[和]</p></div>
+
+<p>好的，这样一个盒里就添加完毕了。这个盒里拥有一级捶打属性…</p>
+<p>你可能不太满意，这样子的物品毫无作用，当然，你可以添加枪械，药品，机器人，无人机等等乱七八糟的，但饭要一口口吃，先做个简单的练练手嘛。</p>
+<p>OK，本期就教大家如何建立一个mod并添加一件物品，下一期我会教大家如何自制一把武器。拜拜啦owo</p>
+]]></content>
+      <categories>
+        <category>CDDA大灾变</category>
+      </categories>
+      <tags>
+        <tag>CDDA大灾变</tag>
+        <tag>精华</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博客Next主题note标签</title>
     <url>/2020/04/01/note-tag/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote>
@@ -428,65 +372,121 @@
       </tags>
   </entry>
   <entry>
-    <title>两数之和(哈希表)</title>
-    <url>/2021/12/25/twosum/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><p>第一题，两数之和，借此学习哈希表的使用方法</p>
+    <title>Hexo+github搭建个人博客</title>
+    <url>/2020/03/31/Hexo-github/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote>
+<h1 id="闲话"><a href="#闲话" class="headerlink" title="闲话"></a>闲话</h1></blockquote>
+<p>前段时间网上冲浪，浏览了一下别人的博客，顿时想自己搞一个（就是酸了），在网上查阅资料后，总结出了以下方法。</p>
+<p><img src="https://s3.ax1x.com/2021/01/23/s7iFC8.png" alt="示例"></p>
 <a id="more"></a>
 
-<hr>
-<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><blockquote>
-<p>给定一个整数数组 <strong>nums</strong> 和一个整数目标值 <strong>target</strong>，请你在该数组中找出 和为目标值 <strong>target</strong>  的那 两个 整数，并返回它们的数组下标。</p>
-<p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</p>
-<p>你可以按任意顺序返回答案。</p>
-</blockquote>
-<blockquote>
-<p>来源：<strong>LeetCode</strong></p>
-</blockquote>
-<h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><h2 id="暴力解法-C-C"><a href="#暴力解法-C-C" class="headerlink" title="暴力解法(C++/C)"></a>暴力解法(C++/C)</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">direct</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>() - <span class="number">1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = i + <span class="number">1</span>; j &lt; nums.<span class="built_in">size</span>(); j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] + nums[j] == target)</span><br><span class="line">            &#123;</span><br><span class="line">				<span class="keyword">return</span> &#123;i,j&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> &#123;i,j&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>1.github账号</p>
+<p>2.安装git</p>
+<p>3.安装Nodejs</p>
+<p>4.安装Hexo</p>
+<h1 id="注册github"><a href="#注册github" class="headerlink" title="注册github"></a>注册github</h1><p>首先到<strong><em><a href="https://github.com/join?source=header-home" target="_blank" rel="noopener">github</a></em></strong>处注册账号</p>
+<p><img src="https://s3.ax1x.com/2021/01/23/s7iP4f.png" alt="示例"></p>
+<p>注意：username会影响到你的域名，你的域名将会是username.github.io，所以建议好好取名。</p>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>在github创建一个<a href="https://github.com/new" target="_blank" rel="noopener">仓库</a>（repository），这将用来存储你的网站，点击<strong><em>New repository</em></strong>按钮创建仓库，<strong><em>Respository name</em></strong>中的<strong>username.github.io</strong>的username一定与前面的Owner一致。</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>Hexo是一个博客框架，基于Nodejs。下面我们开始安Git，Nodejs，Hexo。</p>
+<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p>可下载<a href="https://sourceforge.net/projects/git-osx-installer/" target="_blank" rel="noopener">安装程序</a></p>
+<h2 id="安装Nodejs"><a href="#安装Nodejs" class="headerlink" title="安装Nodejs"></a>安装Nodejs</h2><p>首先安装nvm</p>
+<p>方法1</p>
+<p>.curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh</a> |bash</p>
+<p>方法2</p>
+<p>.wget -qO- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh</a> |bash</p>
+<p>此时nvm就被安装在/.nvm下</p>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>以上所有都安装完成之后再安装Hexo</p>
+<figure class="highlight avrasm"><table><tr><td class="code"><pre><span class="line">$ sudo npm install hexo-<span class="keyword">cli</span> -g</span><br></pre></td></tr></table></figure>
 
-<p>解析:嵌套遍历，时间复杂度为 $O(n^2)$ </p>
-<h2 id="哈希表-C-C"><a href="#哈希表-C-C" class="headerlink" title="哈希表(C++/C)"></a>哈希表(C++/C)</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">hashmap</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; a;  <span class="comment">//建立hash表存放数组元素</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">        a.insert(<span class="built_in">map</span>&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt;::value_type(nums[i], i));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.<span class="built_in">size</span>(); i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (a.count(target - nums[i]) &gt; <span class="number">0</span> &amp;&amp; (a[target - nums[i]] != i)) &#123;  <span class="comment">//判断能否找到并且不是自己本身</span></span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">            <span class="built_in">cout</span> &lt;&lt; a[target - nums[i]] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="编写你的博客"><a href="#编写你的博客" class="headerlink" title="编写你的博客"></a>编写你的博客</h1><h2 id="创建博客"><a href="#创建博客" class="headerlink" title="创建博客"></a>创建博客</h2><p>将下面的username替换成你自己的username，执行成功后，会创建出一个名为username.github.io的文件夹。</p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo init username.github.io</span><br></pre></td></tr></table></figure>
 
-<p>时间复杂度为 $O(n)$</p>
-<h1 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><blockquote>
-<p><a href="https://baike.baidu.com/item/散列表/10027933" target="_blank" rel="noopener">散列表</a>（Hash table，也叫哈希表），是根据关键码值(Key value)而直接进行访问的<a href="https://baike.baidu.com/item/数据结构/1450" target="_blank" rel="noopener">数据结构</a>。也就是说，它通过把关键码值映射到表中一个位置来访问记录，以加快查找的速度。这个映射函数叫做<a href="https://baike.baidu.com/item/散列函数/2366288" target="_blank" rel="noopener">散列函数</a>，存放记录的<a href="https://baike.baidu.com/item/数组/3794097" target="_blank" rel="noopener">数组</a>叫做<a href="https://baike.baidu.com/item/散列表/10027933" target="_blank" rel="noopener">散列表</a>。</p>
-<p>给定表M，存在函数f(key)，对任意给定的关键字值key，代入函数后若能得到包含该关键字的记录在表中的地址，则称表M为哈希(Hash）表，函数f(key)为哈希(Hash) 函数。</p>
-</blockquote>
-<p>摘自<a href="https://baike.baidu.com/item/%E5%93%88%E5%B8%8C%E8%A1%A8/5981869?fr=aladdin" target="_blank" rel="noopener">百度百科</a></p>
-<h2 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h2><p>从一组数据中查询特定的值，按最原始的方法去遍历搜索无疑是最慢的，如果该值处于最后一位，时间花费就会很大。但是我们可以发现这些值之间会存在某种特点的关系，我们可以按照这些关系进行排序，比如说人名，我们可以按照姓名的首字母来排序，这样搜索起来，通过索引下标，我们就可以快速找到需要的数值。这就是通过一些特定的方法去得到一个特定的值，类似于映射函数，这里叫做哈希函数（hash function）</p>
-<p>但是，这种方式有时会导致多个值(value)有了相同的hash值，这就是哈希冲突或者哈希碰撞</p>
-<p>为了解决碰撞，实现哈希表可以有以下两种方式：</p>
-<ul>
-<li>数组 + 链表</li>
-<li>数组 + 二叉树</li>
-</ul>
-<h1 id="哈希冲突"><a href="#哈希冲突" class="headerlink" title="哈希冲突"></a>哈希冲突</h1>]]></content>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>首先我们先切换到刚刚生成的username.github.io目录，安装主题</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> username.github.io</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">$ git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/iissnan/hexo-theme-<span class="keyword">next</span> themes/<span class="keyword">next</span></span><br></pre></td></tr></table></figure>
+
+<p>我这里安装的是Next主题，Next主题是目前最流行的主题，其黑白极简风格我很喜欢</p>
+<h3 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h3><p>打开文件位置username.github.io/_config.yml</p>
+<p>以下有几个键值对必须修改</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="attribute">title</span>: 星界棱镜的虚境<span class="comment">//你博客的名字</span></span><br><span class="line"><span class="attribute">author</span>: mostlai <span class="comment">//你的名字</span></span><br><span class="line"><span class="attribute">language</span>: zh-Hans <span class="comment">//语言 中文</span></span><br><span class="line"><span class="attribute">theme</span>: next <span class="comment">//刚刚安装的主题名称</span></span><br><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line"> <span class="attribute">type</span>: git <span class="comment">//使用Git 发布</span></span><br><span class="line"> <span class="attribute">repo</span>: <span class="attribute">https</span>:<span class="comment">//github.com/username/username.github.io.git //刚创建的Github仓库</span></span><br></pre></td></tr></table></figure>
+<p>更多配置请看<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">这里</a></p>
+<h3 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h3><p>主题配置文件在username.github.io/themes/next/_config.yml中修改</p>
+<p>帮助请看<a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="noopener">这里</a></p>
+<h3 id="写下第一篇文章"><a href="#写下第一篇文章" class="headerlink" title="写下第一篇文章"></a>写下第一篇文章</h3><p>在username.github.io/source/_posts下创建你的第一个博客</p>
+<p>打个栗子</p>
+<p>创建一个名为lengjingNB.md的文件，用Markdown进行创作</p>
+<p>这里给一个Markdown语法的<a href="https://www.jianshu.com/p/191d1e21f7ed/" target="_blank" rel="noopener">教程</a></p>
+<h1 id="测试你的博客"><a href="#测试你的博客" class="headerlink" title="测试你的博客"></a>测试你的博客</h1><figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo s</span><br></pre></td></tr></table></figure>
+
+<p>测试服务启动，在浏览器中输入localhost:4000即可访问你的博客</p>
+<h1 id="发布你的博客"><a href="#发布你的博客" class="headerlink" title="发布你的博客"></a>发布你的博客</h1><p>安装<a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="noopener">hexo-deployer-git</a>自动部署发布工具</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+
+<p>如果你觉得博客没问题了，你就可以就生成静态网页文件发布至Github pages中</p>
+<figure class="highlight sas"><table><tr><td class="code"><pre><span class="line">$ hexo clean <span class="variable">&amp;&amp;</span> hexo g <span class="variable">&amp;&amp;</span> hexo d</span><br></pre></td></tr></table></figure>
+<p>终端会让你输入Github的用户名和密码，正确输入后，你的博客就可以上传至github了。</p>
+<h1 id="访问你的博客"><a href="#访问你的博客" class="headerlink" title="访问你的博客"></a>访问你的博客</h1><p>在浏览器中输入 <a href="http://username.github.io" target="_blank" rel="noopener">http://username.github.io</a> 就能够访问了</p>
+<h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><p><a href="https://hexo.io/themes/" target="_blank" rel="noopener">更多主题</a></p>
+<p><a href="https://hexo.io/plugins/" target="_blank" rel="noopener">更多配置</a></p>
+]]></content>
       <categories>
-        <category>算法</category>
+        <category>开发日记</category>
+        <category>折腾</category>
       </categories>
       <tags>
-        <tag>算法</tag>
-        <tag>哈希表</tag>
+        <tag>开发日记</tag>
       </tags>
   </entry>
   <entry>
-    <title>浏览需知(必读)</title>
-    <url>/2020/08/26/rule/</url>
+    <title>关于Next主题中分类/标签等页面404的解决办法</title>
+    <url>/2020/03/30/Next-404/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><blockquote>
-<h1 id="浏览需知"><a href="#浏览需知" class="headerlink" title="浏览需知"></a>浏览需知</h1></blockquote>
+<h1 id="闲话"><a href="#闲话" class="headerlink" title="闲话"></a>闲话</h1></blockquote>
+<p>  最近在搞博客，Next主题踩了不少坑，这个404问题就困扰了我很久，研究了一会儿终于找到了办法。</p>
 <hr>
-<h1 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h1><p>  ●为使登陆本网站的各界朋友能正确利用本站资源，星界棱镜子的虚境【下称：本博客】 谨此提醒您：在访问和接受本博客及其旗下各网站、平台、服务前，请您务必事先认真阅读并理解本声明（如果您未满18周岁，您需要在父母或监护人的陪同下阅读本声明）。<br>  ●本站中的文章（包括转帖文章）若作者有版权声明的或文章从其它网站转载而附带有原所有站的版权声明者，其版权归属以附带声明为准；文章仅代表作者本人的观点，与本站立场无关；<br>  ●凡以任何方式登陆本网站或直接、间接使用本网站资料者，视为自愿接受本站声明的约束。<br>  ●对于因不可抗力或不能控制的原因(如战争,自然灾害,核爆炸,各级末日场景,模因危害,现实扭曲,历史重构,认知颠覆,因果重构,维度转变,熵值异常,全面艾莉森·埃尔卡特失效,人类支配地位丧失,时空连续性毁坏等等)造成的网络服务中断或其它缺陷，本站均得免责。<br>  ●任何单位或个人认为本站内容可能涉嫌侵犯其合法权益，应该及时向本站书面反馈，并提供身份证明、权属证明及详细侵权情况证明，本站在收到上述文件并经核实确认后，将会尽快移除相关内容。</p>
-<h1 id="关于评论"><a href="#关于评论" class="headerlink" title="关于评论"></a>关于评论</h1><p>  ●发表评论时不得违反国家的法律法规以及论坛的各项规定。传输和利用信息符合中国法律、国际公约的规定、符合公序良俗,评论者若在发表评论过程中，有触犯国家法律、法规的，一切后果自行负责。<br>  ●禁止滥发链接、暗链、链接群。<br>  ●容许在头像、签名设置一般广告，但禁止在头像、用户名、评论内容、签名、短消息、联系博主等位置进行令人反感的非法广告推广、色情信息传播、过度的SEO推广。<br>  ●禁止一切色情，暴力，赌博，政治敏感，不正当广告。<br>  ●不得利用评论功能发表、传播任何骚扰性的、中伤他人的、辱骂性的、恐吓性的、庸俗淫秽的、公布他人隐私的或其他任何非法及违反网络道德的信息和言论。<br>  ●不得为任何非法目的而使用网络服务系统</p>
-<h1 id="法律责任"><a href="#法律责任" class="headerlink" title="法律责任"></a>法律责任</h1><p>  ●浏览需知为浏览本博客必需阅读且遵守的规则，如任何个体在本博客进行活动，则视为已经阅读并遵守本规则。其在本博客的行为所产生的一切后果自负。<br>  ●如个体拒绝遵守规则，则视为无权访问本博客，本网站使用者因为违反本声明的规定而触犯中华人民共和国法律的，一切后果自己负责，本网站不承担任何责任。<br>  ●本站旨在为广大用户提供更多的信息，其部分服务是无偿的；本站不保证向用户提供的外部链接的准确性和完整性，该外部链接指向的不由本站实际控制的任何网页上的内容，本网站对其合法性亦概不负责，亦不承担任何法律责任，本站内所有内容亦不表明本网站之观点或意见。<br>  ●由于与本网站链接的其它网站所造成之个人资料泄露及由此而导致的任何法律争议和后果，本站均得免责。<br>  ●由于用户将个人密码告知他人或与他人共享注册帐户，由此导致的任何个人资料泄露，本站不负任何责任。<br>  ●当政府司法机关依照法定程序要求本网站披露个人资料时，我们将根据执法单位之要求或为公共安全之目的提供个人资料。在此情况下之任何披露，本站均得免责。</p>
-<h1 id="条款修改"><a href="#条款修改" class="headerlink" title="条款修改"></a>条款修改</h1><p>  ●鉴于网络服务的特殊性，本博客将有权随时修改本声明，一旦本声明的内容发生变动，本博客不再另行通知。<br>  ●本规则一切解释权归博主所有。</p>
+<a id="more"></a>
+
+<h1 id="症状"><a href="#症状" class="headerlink" title="症状"></a>症状</h1><p>主要表现为网页链接后多出<strong>%20</strong></p>
+<h1 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h1><p>打开<strong>username.github.io\themes\next_config.yml</strong></p>
+<p>找到以下代码</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line"><span class="symbol">  home:</span> / || home</span><br><span class="line"><span class="symbol">  about:</span> <span class="meta-keyword">/about/</span> || user</span><br><span class="line"><span class="symbol">  tags:</span> <span class="meta-keyword">/tags/</span> || tags</span><br><span class="line"><span class="symbol">  categories:</span> <span class="meta-keyword">/categories/</span> || th</span><br><span class="line"><span class="symbol">  archives:</span> <span class="meta-keyword">/archives/</span> || archive</span><br><span class="line"><span class="symbol">  schedule:</span> <span class="meta-keyword">/schedule/</span> || calendar</span><br><span class="line"><span class="symbol">  sitemap:</span> /sitemap.xml || sitemap</span><br><span class="line"><span class="symbol">  commonweal:</span> /<span class="number">404</span>/ || heartbeat</span><br></pre></td></tr></table></figure>
+
+<p>明显发现每个||前都带有<strong>空格</strong>，这个<strong>空格</strong>就是罪魁祸首啦。</p>
+<p>删除每个||前的<strong>空格</strong>，改为以下代码</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line"><span class="symbol">  home:</span> /|| home</span><br><span class="line"><span class="symbol">  about:</span> <span class="meta-keyword">/about/</span>|| user</span><br><span class="line"><span class="symbol">  tags:</span> <span class="meta-keyword">/tags/</span>|| tags</span><br><span class="line"><span class="symbol">  categories:</span> <span class="meta-keyword">/categories/</span>|| th</span><br><span class="line"><span class="symbol">  archives:</span> <span class="meta-keyword">/archives/</span>|| archive</span><br><span class="line"><span class="symbol">  schedule:</span> <span class="meta-keyword">/schedule/</span>|| calendar</span><br><span class="line"><span class="symbol">  sitemap:</span> /sitemap.xml|| sitemap</span><br><span class="line"><span class="symbol">  commonweal:</span> /<span class="number">404</span>/|| heartbeat</span><br></pre></td></tr></table></figure>
+
+<p>重新部署发布，解决问题。</p>
 ]]></content>
       <categories>
-        <category>浏览需知</category>
-        <category>精华</category>
-        <category>置顶</category>
+        <category>开发日记</category>
+        <category>折腾</category>
       </categories>
       <tags>
-        <tag>浏览需知</tag>
+        <tag>开发日记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NEW ONE</title>
+    <url>/2020/03/29/NEW-ONE-1/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="初入博客"><a href="#初入博客" class="headerlink" title="初入博客"></a>初入博客</h2><a id="more"></a>
+
+<blockquote>
+<p>我已出仓，感觉良好。</p>
+</blockquote>
+<p> ————————————————————</p>
+<p> 2020.3.29</p>
+<p> 总算是搭建好博客了呢，开心！</p>
+<p><img src="https://s3.ax1x.com/2021/01/23/s7iCUP.png" alt="示例"></p>
+<p>——————————————————————</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+        <category>最初之作</category>
+      </categories>
+      <tags>
+        <tag>摸鱼</tag>
       </tags>
   </entry>
 </search>
