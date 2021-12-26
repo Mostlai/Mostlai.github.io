@@ -80,8 +80,8 @@
   </style>
   <script>
     function blurImage() {
-      var blurAmount = Math.floor((Math.random() * 3) + 0);
-      var grayAmount = (Math.random() * 0.4) + 0.1;
+      var blurAmount = Math.floor((Math.random() * 2) + 0);
+      var grayAmount = (Math.random() * 0.1) + 0.1;
 
       var page = document.getElementById('bgPage');
       
@@ -106,8 +106,20 @@
   </script>
 
     <div class="bg-box" id="bgPage">
-      <img src="/images/cover1.jpg" alt="image frame" />
+      <img src="" alt="image frame" id="cover-pic"/>
     </div>
+
+    <!-- 随机封面 -->
+    <script>
+	    function random(){
+	    	var i=Math.floor((Math.random()*345));
+	    	imgs=[ "/images/bg/cover%20(11).jpg", "/images/bg/cover%20(12).jpg", "/images/bg/cover%20(13).jpg", "/images/bg/cover%20(14).jpg", "/images/bg/cover%20(15).jpg", "/images/bg/cover%20(16).jpg", "/images/bg/cover%20(17).jpg", "/images/bg/cover%20(18).jpg", "/images/bg/cover%20(19).jpg", "/images/bg/cover%20(20).jpg", "/images/bg/cover%20(21).jpg", "/images/bg/cover%20(22).jpg", "/images/bg/cover%20(23).jpg", "/images/bg/cover%20(24).jpg", "/images/bg/cover%20(25).jpg", "/images/bg/cover%20(26).jpg", "/images/bg/cover%20(27).jpg", "/images/bg/cover%20(28).jpg", "/images/bg/cover%20(29).jpg", "/images/bg/cover%20(30).jpg", "/images/bg/cover%20(31).jpg", "/images/bg/cover%20(32).jpg", "/images/bg/cover%20(33).jpg", "/images/bg/cover%20(34).jpg", "/images/bg/cover%20(35).jpg", "/images/bg/cover%20(36).jpg", "/images/bg/cover%20(37).jpg", "/images/bg/cover%20(38).jpg", "/images/bg/cover%20(39).jpg", "/images/bg/cover%20(40).jpg", "/images/bg/cover%20(41).jpg", "/images/bg/cover%20(42).jpg", "/images/bg/cover%20(43).jpg", "/images/bg/cover%20(44).jpg", "/images/bg/cover%20(45).jpg", "/images/bg/cover%20(46).jpg", "/images/bg/cover%20(47).jpg", "/images/bg/cover%20(48).jpg", "/images/bg/cover%20(49).jpg", "/images/bg/cover%20(50).jpg", "/images/bg/cover%20(51).jpg", "/images/bg/cover%20(52).jpg", "/images/bg/cover%20(53).jpg", "/images/bg/cover%20(54).jpg", "/images/bg/cover%20(55).jpg", "/images/bg/cover%20(56).jpg", "/images/bg/cover%20(57).jpg", "/images/bg/cover%20(58).jpg", "/images/bg/cover%20(59).jpg", "/images/bg/cover%20(60).jpg", "/images/bg/cover%20(61).jpg", "/images/bg/cover%20(62).jpg", "/images/bg/cover%20(63).jpg", "/images/bg/cover%20(64).jpg", "/images/bg/cover%20(65).jpg", "/images/bg/cover%20(66).jpg", "/images/bg/cover%20(67).jpg", "/images/bg/cover%20(68).jpg", "/images/bg/cover%20(69).jpg", "/images/bg/cover%20(70).jpg", "/images/bg/cover%20(71).jpg", "/images/bg/cover%20(72).jpg", "/images/bg/cover%20(73).jpg", "/images/bg/cover%20(74).jpg", "/images/bg/cover%20(75).jpg", "/images/bg/cover%20(76).jpg", "/images/bg/cover%20(77).jpg", "/images/bg/cover%20(78).jpg", "/images/bg/cover%20(79).jpg", "/images/bg/cover%20(80).jpg", "/images/bg/cover%20(81).jpg", "/images/bg/cover%20(82).jpg", "/images/bg/cover%20(83).jpg", "/images/bg/cover%20(84).jpg", "/images/bg/cover%20(85).jpg", "/images/bg/cover%20(86).jpg", "/images/bg/cover%20(87).jpg", "/images/bg/cover%20(88).jpg", "/images/bg/cover%20(89).jpg", "/images/bg/cover%20(90).jpg", "/images/bg/cover%20(91).jpg", "/images/bg/cover%20(92).jpg", "/images/bg/cover%20(93).jpg", "/images/bg/cover%20(94).jpg", "/images/bg/cover%20(95).jpg", "/images/bg/cover%20(96).jpg", "/images/bg/cover%20(97).jpg", "/images/bg/cover%20(98).jpg", "/images/bg/cover%20(99).jpg", "/images/bg/cover%20(100).jpg", "/images/bg/cover%20(101).jpg", "/images/bg/cover%20(102).jpg", "/images/bg/cover%20(103).jpg", "/images/bg/cover%20(104).jpg", "/images/bg/cover%20(105).jpg", "/images/bg/cover%20(106).jpg", "/images/bg/cover%20(107).jpg", "/images/bg/cover%20(108).jpg", "/images/bg/cover%20(109).jpg", "/images/bg/cover%20(110).jpg", "/images/bg/cover%20(111).jpg", "/images/bg/cover%20(112).jpg", "/images/bg/cover%20(113).jpg", "/images/bg/cover%20(114).jpg", "/images/bg/cover%20(115).jpg", "/images/bg/cover%20(116).jpg", "/images/bg/cover%20(117).jpg", "/images/bg/cover%20(118).jpg", "/images/bg/cover%20(119).jpg", "/images/bg/cover%20(120).jpg", "/images/bg/cover%20(121).jpg", "/images/bg/cover%20(122).jpg", "/images/bg/cover%20(123).jpg", "/images/bg/cover%20(124).jpg", "/images/bg/cover%20(125).jpg", "/images/bg/cover%20(126).jpg", "/images/bg/cover%20(127).jpg", "/images/bg/cover%20(128).jpg", "/images/bg/cover%20(129).jpg", "/images/bg/cover%20(130).jpg", "/images/bg/cover%20(131).jpg", "/images/bg/cover%20(132).jpg", "/images/bg/cover%20(133).jpg", "/images/bg/cover%20(134).jpg", "/images/bg/cover%20(135).jpg", "/images/bg/cover%20(136).jpg", "/images/bg/cover%20(137).jpg", "/images/bg/cover%20(138).jpg", "/images/bg/cover%20(139).jpg", "/images/bg/cover%20(140).jpg", "/images/bg/cover%20(141).jpg", "/images/bg/cover%20(142).jpg", "/images/bg/cover%20(143).jpg", "/images/bg/cover%20(144).jpg", "/images/bg/cover%20(145).jpg", "/images/bg/cover%20(146).jpg", "/images/bg/cover%20(147).jpg", "/images/bg/cover%20(148).jpg", "/images/bg/cover%20(149).jpg", "/images/bg/cover%20(150).jpg", "/images/bg/cover%20(151).jpg", "/images/bg/cover%20(152).jpg", "/images/bg/cover%20(153).jpg", "/images/bg/cover%20(154).jpg", "/images/bg/cover%20(155).jpg", "/images/bg/cover%20(156).jpg", "/images/bg/cover%20(157).jpg", "/images/bg/cover%20(158).jpg", "/images/bg/cover%20(159).jpg", "/images/bg/cover%20(160).jpg", "/images/bg/cover%20(161).jpg", "/images/bg/cover%20(162).jpg", "/images/bg/cover%20(163).jpg", "/images/bg/cover%20(164).jpg", "/images/bg/cover%20(165).jpg", "/images/bg/cover%20(166).jpg", "/images/bg/cover%20(167).jpg", "/images/bg/cover%20(168).jpg", "/images/bg/cover%20(169).jpg", "/images/bg/cover%20(170).jpg", "/images/bg/cover%20(171).jpg", "/images/bg/cover%20(172).jpg", "/images/bg/cover%20(173).jpg", "/images/bg/cover%20(174).jpg", "/images/bg/cover%20(175).jpg", "/images/bg/cover%20(176).jpg", "/images/bg/cover%20(177).jpg", "/images/bg/cover%20(178).jpg", "/images/bg/cover%20(179).jpg", "/images/bg/cover%20(180).jpg", "/images/bg/cover%20(181).jpg", "/images/bg/cover%20(182).jpg", "/images/bg/cover%20(183).jpg", "/images/bg/cover%20(184).jpg", "/images/bg/cover%20(185).jpg", "/images/bg/cover%20(186).jpg", "/images/bg/cover%20(187).jpg", "/images/bg/cover%20(188).jpg", "/images/bg/cover%20(189).jpg", "/images/bg/cover%20(190).jpg", "/images/bg/cover%20(191).jpg", "/images/bg/cover%20(192).jpg", "/images/bg/cover%20(193).jpg", "/images/bg/cover%20(194).jpg", "/images/bg/cover%20(195).jpg", "/images/bg/cover%20(196).jpg", "/images/bg/cover%20(197).jpg", "/images/bg/cover%20(198).jpg", "/images/bg/cover%20(199).jpg", "/images/bg/cover%20(200).jpg", "/images/bg/cover%20(201).jpg", "/images/bg/cover%20(202).jpg", "/images/bg/cover%20(203).jpg", "/images/bg/cover%20(204).jpg", "/images/bg/cover%20(205).jpg", "/images/bg/cover%20(206).jpg", "/images/bg/cover%20(207).jpg", "/images/bg/cover%20(208).jpg", "/images/bg/cover%20(209).jpg", "/images/bg/cover%20(210).jpg", "/images/bg/cover%20(211).jpg", "/images/bg/cover%20(212).jpg", "/images/bg/cover%20(213).jpg", "/images/bg/cover%20(214).jpg", "/images/bg/cover%20(215).jpg", "/images/bg/cover%20(216).jpg", "/images/bg/cover%20(217).jpg", "/images/bg/cover%20(218).jpg", "/images/bg/cover%20(219).jpg", "/images/bg/cover%20(220).jpg", "/images/bg/cover%20(221).jpg", "/images/bg/cover%20(222).jpg", "/images/bg/cover%20(223).jpg", "/images/bg/cover%20(224).jpg", "/images/bg/cover%20(225).jpg", "/images/bg/cover%20(226).jpg", "/images/bg/cover%20(227).jpg", "/images/bg/cover%20(228).jpg", "/images/bg/cover%20(229).jpg", "/images/bg/cover%20(230).jpg", "/images/bg/cover%20(231).jpg", "/images/bg/cover%20(232).jpg", "/images/bg/cover%20(233).jpg", "/images/bg/cover%20(234).jpg", "/images/bg/cover%20(235).jpg", "/images/bg/cover%20(236).jpg", "/images/bg/cover%20(237).jpg", "/images/bg/cover%20(238).jpg", "/images/bg/cover%20(239).jpg", "/images/bg/cover%20(240).jpg", "/images/bg/cover%20(241).jpg", "/images/bg/cover%20(242).jpg", "/images/bg/cover%20(243).jpg", "/images/bg/cover%20(244).jpg", "/images/bg/cover%20(245).jpg", "/images/bg/cover%20(246).jpg", "/images/bg/cover%20(247).jpg", "/images/bg/cover%20(248).jpg", "/images/bg/cover%20(249).jpg", "/images/bg/cover%20(250).jpg", "/images/bg/cover%20(251).jpg", "/images/bg/cover%20(252).jpg", "/images/bg/cover%20(253).jpg", "/images/bg/cover%20(254).jpg", "/images/bg/cover%20(255).jpg", "/images/bg/cover%20(256).jpg", "/images/bg/cover%20(257).jpg", "/images/bg/cover%20(258).jpg", "/images/bg/cover%20(259).jpg", "/images/bg/cover%20(260).jpg", "/images/bg/cover%20(261).jpg", "/images/bg/cover%20(262).jpg", "/images/bg/cover%20(263).jpg", "/images/bg/cover%20(264).jpg", "/images/bg/cover%20(265).jpg", "/images/bg/cover%20(266).jpg", "/images/bg/cover%20(267).jpg", "/images/bg/cover%20(268).jpg", "/images/bg/cover%20(269).jpg", "/images/bg/cover%20(270).jpg", "/images/bg/cover%20(271).jpg", "/images/bg/cover%20(272).jpg", "/images/bg/cover%20(273).jpg", "/images/bg/cover%20(274).jpg", "/images/bg/cover%20(275).jpg", "/images/bg/cover%20(276).jpg", "/images/bg/cover%20(277).jpg", "/images/bg/cover%20(278).jpg", "/images/bg/cover%20(279).jpg", "/images/bg/cover%20(280).jpg", "/images/bg/cover%20(281).jpg", "/images/bg/cover%20(282).jpg", "/images/bg/cover%20(283).jpg", "/images/bg/cover%20(284).jpg", "/images/bg/cover%20(285).jpg", "/images/bg/cover%20(286).jpg", "/images/bg/cover%20(287).jpg", "/images/bg/cover%20(288).jpg", "/images/bg/cover%20(289).jpg", "/images/bg/cover%20(290).jpg", "/images/bg/cover%20(291).jpg", "/images/bg/cover%20(292).jpg", "/images/bg/cover%20(293).jpg", "/images/bg/cover%20(294).jpg", "/images/bg/cover%20(295).jpg", "/images/bg/cover%20(296).jpg", "/images/bg/cover%20(297).jpg", "/images/bg/cover%20(298).jpg", "/images/bg/cover%20(299).jpg", "/images/bg/cover%20(300).jpg", "/images/bg/cover%20(301).jpg", "/images/bg/cover%20(302).jpg", "/images/bg/cover%20(303).jpg", "/images/bg/cover%20(304).jpg", "/images/bg/cover%20(305).jpg", "/images/bg/cover%20(306).jpg", "/images/bg/cover%20(307).jpg", "/images/bg/cover%20(308).jpg", "/images/bg/cover%20(309).jpg", "/images/bg/cover%20(310).jpg", "/images/bg/cover%20(311).jpg", "/images/bg/cover%20(312).jpg", "/images/bg/cover%20(313).jpg", "/images/bg/cover%20(314).jpg", "/images/bg/cover%20(315).jpg", "/images/bg/cover%20(316).jpg", "/images/bg/cover%20(317).jpg", "/images/bg/cover%20(318).jpg", "/images/bg/cover%20(319).jpg", "/images/bg/cover%20(320).jpg", "/images/bg/cover%20(321).jpg", "/images/bg/cover%20(322).jpg", "/images/bg/cover%20(323).jpg", "/images/bg/cover%20(324).jpg", "/images/bg/cover%20(325).jpg", "/images/bg/cover%20(326).jpg", "/images/bg/cover%20(327).jpg", "/images/bg/cover%20(328).jpg", "/images/bg/cover%20(329).jpg", "/images/bg/cover%20(330).jpg", "/images/bg/cover%20(331).jpg", "/images/bg/cover%20(332).jpg", "/images/bg/cover%20(333).jpg", "/images/bg/cover%20(334).jpg", "/images/bg/cover%20(335).jpg", "/images/bg/cover%20(336).jpg", "/images/bg/cover%20(337).jpg", "/images/bg/cover%20(338).jpg", "/images/bg/cover%20(339).jpg", "/images/bg/cover%20(340).jpg", "/images/bg/cover%20(341).jpg", "/images/bg/cover%20(342).jpg", "/images/bg/cover%20(343).jpg", "/images/bg/cover%20(344).jpg", "/images/bg/cover%20(345).jpg",]
+	    	pic=document.getElementById("cover-pic");
+	    	pic.src=imgs[i];
+	    }
+	    random();
+    </script>
+
     <div class="cover-inner text-center text-white">
       <h1><a href="/">星界棱镜子的虚境</a></h1>
       <div id="subtitle-box">
@@ -261,6 +273,63 @@
 
     
     <article
+  id="post-9Palindrome"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2021/12/26/9Palindrome/"
+    >9Palindrome</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2021/12/26/9Palindrome/" class="article-date">
+  <time datetime="2021-12-26T04:52:22.000Z" itemprop="datePublished">2021-12-26</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a> / <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/LeetCode/">LeetCode</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><p>第九题，判断回文数</p> 
+      <a class="article-more-link" href="/2021/12/26/9Palindrome/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%88%87%E7%89%87/" rel="tag">切片</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+    
+</article>
+
+    
+    <article
   id="post-twosum"
   class="article article-type-post"
   itemscope
@@ -285,7 +354,7 @@
   <time datetime="2021-12-25T03:49:25.000Z" itemprop="datePublished">2021-12-25</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+    <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a> / <a class="article-category-link" href="/categories/%E7%AE%97%E6%B3%95/LeetCode/">LeetCode</a>
   </div>
    
     </div>
@@ -306,7 +375,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/" rel="tag">哈希表</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LeetCode/" rel="tag">LeetCode</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/" rel="tag">哈希表</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
 
     </footer>
   </div>
@@ -731,66 +800,14 @@
 </article>
 
     
-    <article
-  id="post-NEW-ONE-1"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/03/29/NEW-ONE-1/"
-    >NEW ONE</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/03/29/NEW-ONE-1/" class="article-date">
-  <time datetime="2020-03-29T10:27:00.000Z" itemprop="datePublished">2020-03-29</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a> / <a class="article-category-link" href="/categories/%E9%9A%8F%E7%AC%94/%E6%9C%80%E5%88%9D%E4%B9%8B%E4%BD%9C/">最初之作</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h2 id="初入博客"><a href="#初入博客" class="headerlink" title="初入博客"></a>初入博客</h2> 
-      <a class="article-more-link" href="/2020/03/29/NEW-ONE-1/"
-        >阅读更多...</a
-      >
-       
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%91%B8%E9%B1%BC/" rel="tag">摸鱼</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-    
-</article>
-
-    
   </article>
   
 
+  
+  <nav class="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+  </nav>
   
 </section>
 </div>
